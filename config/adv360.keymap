@@ -91,7 +91,7 @@
           bindings = <
             &none  &none  &none         &none     &none     &none  &none                                            &none  &none  &none  &none  &none  &none  &none
             &none  &none  &none         &kp RBRC  &kp PIPE  &none  &none                                            &none  &none  &none  &none  &none  &none  &none
-            &none  &none  &kp PLUS      &kp STAR  &kp LPAR  &none  &none         &none  &none  &none  &none         &none  &none  &none  &none  &none  &none  &none
+            &none  &none  &kp UNDER     &kp STAR  &kp LPAR  &none  &none         &none  &none  &none  &none         &none  &none  &none  &none  &none  &none  &none
             &none  &none  &kp LS(INT1)  &kp RBKT  &kp BSLH  &none                       &none  &none                       &none  &none  &none  &none  &none  &none
             &none  &none  &none         &none     &none                   &none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none
           >;
