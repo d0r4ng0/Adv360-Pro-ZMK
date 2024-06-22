@@ -58,7 +58,7 @@
     compatible = "zmk,behavior-mod-morph";
     label = "ANSI_N9_WITH_JIS";
     #binding-cells = <0>;
-    bindings = <&kp NON_US_BACKSLASH>, <&kp N9>;
+    bindings = <&kp BACKSLASH>, <&kp N9>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   n0j: ansi_n0_and_asterisk_with_jis {
@@ -79,7 +79,7 @@
     compatible = "zmk,behavior-mod-morph";
     label = "ANSI_EQUAL_WITH_JIS";
     #binding-cells = <0>;
-    bindings = <&kp UNDERSCORE>, <&kp COLON>;
+    bindings = <&kp UNDERSCORE>, <&kp LS(SEMICOLON)>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   muj: ansi_minus_and_underscore_with_jis {
