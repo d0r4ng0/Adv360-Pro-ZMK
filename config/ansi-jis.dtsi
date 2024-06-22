@@ -79,7 +79,7 @@
     compatible = "zmk,behavior-mod-morph";
     label = "ANSI_EQUAL_WITH_JIS";
     #binding-cells = <0>;
-    bindings = <&kp UNDERSCORE>, <&kp LS(SEMICOLON)>;
+    bindings = <&kp UNDERSCORE>, <&kp KP_PLUS>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   muj: ansi_minus_and_underscore_with_jis {
