@@ -53,11 +53,11 @@
 
         default_layer {
           bindings = <
-            &caps_word  &n1j   &n2j          &n3j      &n4j       &n5j   &tog KP                                                                   &mo MOD  &n6j    &n7j      &n8j       &n9j     &n0j      &bpj
-            &epj        &kp Q  &kp W         &kp E     &kp R      &kp T  &tog DEF                                                                  &none    &kp Y   &kp U     &kp I      &kp O    &kp P     &muj
-            &gtj        &kp A  &kp S         &kp D     &kp F      &kp G  &none              &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &none    &kp H   &kp J     &kp K      &kp L    &scj      &qdj
-            &kp LSHFT   &kp Z  &kp X         &kp C     &kp V      &kp B                                &kp DEL    &kp TAB                                   &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-            &mo FN      &caj   &mt LGUI TAB  &kp LEFT  &kp RIGHT                  &kp BSPC  &kp ESC    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE           &kp UP  &kp DOWN  &mo SYM    &dhj     &mo FN 
+            &kp TAB  &n1j   &n2j          &n3j      &n4j       &n5j   &tog KP                                                                   &mo MOD  &n6j    &n7j      &n8j       &n9j     &n0j      &bpj
+            &epj     &kp Q  &kp W         &kp E     &kp R      &kp T  &tog DEF                                                                  &none    &kp Y   &kp U     &kp I      &kp O    &kp P     &muj
+            &gtj     &kp A  &kp S         &kp D     &kp F      &kp G  &none              &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &none    &kp H   &kp J     &kp K      &kp L    &scj      &qdj
+            &td_sft  &kp Z  &kp X         &kp C     &kp V      &kp B                                &kp DEL    &kp TAB                                   &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH  &td_sft
+            &mo FN   &caj   &mt LGUI TAB  &kp LEFT  &kp RIGHT                  &kp BSPC  &kp ESC    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE           &kp UP  &kp DOWN  &mo SYM    &dhj     &mo FN 
           >;
         };
 
@@ -83,11 +83,11 @@
 
         layer_mod {
           bindings = <
-            &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
-            &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
-            &none         &none         &none         &none         &none         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
-            &none         &none         &none         &none         &none         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
-            &none         &none         &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
+            &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                                        &trans                  &none  &none       &none       &none   &none   &none
+            &none         &none         &none         &none         &none         &none  &bootloader                                                                  &bootloader             &none  &none       &none       &none   &none   &none
+            &none         &none         &none         &none         &none         &none  &none                &none   &none  &bt BT_CLR  &none                        &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none   &none   &none
+            &none         &none         &none         &none         &none         &none                               &none  &none                                                            &none  &none       &none       &none   &none   &none
+            &none         &none         &none         &none         &none                             &none   &none   &none  &none       &bl BL_TOG  &rgb_ug RGB_TOG                                 &bl BL_INC  &bl BL_DEC  &none   &none   &none
           >;
         };
 
@@ -103,10 +103,10 @@
 
         layer_qwerty {
           bindings = <
-            &caps_word &kp N1  &kp N2       &kp N3   &kp N4     &kp N5 &none                                                            &mo MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp BSLH
+            &kp TAB    &kp N1  &kp N2       &kp N3   &kp N4     &kp N5 &none                                                            &mo MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp BSLH
             &kp EQUAL  &kp Q   &kp W        &kp E    &kp R      &kp T  &trans                                                           &none   &kp Y  &kp U  &kp I     &kp O    &kp P    &kp MINUS
             &kp GRAVE  &kp A   &kp S        &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT  &kp LGUI  &kp RCTRL          &none   &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-            &sk LSHFT  &kp Z   &kp X        &kp C    &kp V      &kp B                            &kp DEL   &kp TAB                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &sk RSHFT
+            &td_sft    &kp Z   &kp X        &kp C    &kp V      &kp B                            &kp DEL   &kp TAB                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &td_sft
             &mo FN     &kp TAB &mt LGUI TAB &kp LEFT &kp RIGHT                &kp BSPC &kp ESC   &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
           >;
         };
