@@ -125,11 +125,11 @@
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
-  n1a: ansi_n1_and_caret {
+  n1a: ansi_n1_and_exclamation {
     compatible = "zmk,behavior-mod-morph";
     label = "ANSI_N1";
     #binding-cells = <0>;
-    bindings = <&kp CARET>, <&kp N1>;
+    bindings = <&kp EXCLAMATION>, <&kp N1>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   n2a: ansi_n2_and_left_bracket {
@@ -188,24 +188,24 @@
     bindings = <&kp RIGHT_BRACKET>, <&kp N9>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-  n0a: ansi_n0_and_doller {
+  n0a: ansi_n0_and_asterisk {
     compatible = "zmk,behavior-mod-morph";
     label = "ANSI_N0";
     #binding-cells = <0>;
-    bindings = <&kp DOLLAR>, <&kp N0>;
+    bindings = <&kp ASTERISK>, <&kp N0>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-  eha: ansi_exclamation_and_hash {
+  caa: ansi_caret_and_at {
     compatible = "zmk,behavior-mod-morph";
     label = "ANSI_EXCLAMATION";
     #binding-cells = <0>;
-    bindings = <&kp EXCLAMATION>, <&kp HASH>;
+    bindings = <&kp CARET>, <&kp AT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-  aaa: ansi_at_and_asterisk {
+  dha: ansi_dollar_and_hash {
     compatible = "zmk,behavior-mod-morph";
     label = "ANSI_AT";
     #binding-cells = <0>;
-    bindings = <&kp AT>, <&kp ASTERISK>;
+    bindings = <&kp DOLLAR>, <&kp HASH>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
