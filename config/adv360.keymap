@@ -11,6 +11,10 @@
 #define SYM  4
 #define DEF  5
 
+&caps_word {
+  continue-list = <UNDERSCORE MINUS LS(INT1) BACKSPACE DELETE>;
+};
+
 / {
     behaviors {
       #include "macros.dtsi"
@@ -41,10 +45,6 @@
         tapping-term-ms = <200>;
         bindings = <&kp LSHFT>, <&caps_word>;
       };
-    };
-
-    &caps_word {
-      continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
     };
 
     keymap {
