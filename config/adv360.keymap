@@ -44,7 +44,7 @@
     };
 
     &caps_word {
-      continue-list = <UNDERSCORE MINUS LS(INT1) BACKSPACE DELETE>;
+      continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
     };
 
     keymap {
