@@ -112,16 +112,23 @@
   };
   caj: ansi_caret_and_at_with_jis {
     compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_EXCLAMATION_WITH_JIS";
+    label = "ANSI_CARET_WITH_JIS";
     #binding-cells = <0>;
     bindings = <&kp EQUAL>, <&kp LEFT_BRACKET>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   dhj: ansi_dollar_and_hash_with_jis {
     compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_AT_WITH_JIS";
+    label = "ANSI_DOLLAR_WITH_JIS";
     #binding-cells = <0>;
     bindings = <&kp DOLLAR>, <&kp HASH>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  ahj: ansi_at_and_hash_with_jis {
+    compatible = "zmk,behavior-mod-morph";
+    label = "ANSI_AT_WITH_JIS";
+    #binding-cells = <0>;
+    bindings = <&kp LEFT_BRACKET>, <&kp HASH>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
