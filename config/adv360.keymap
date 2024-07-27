@@ -18,7 +18,7 @@
 };
 
 &sk {
-  quick_release;
+  quick-release;
 };
 
 / {
