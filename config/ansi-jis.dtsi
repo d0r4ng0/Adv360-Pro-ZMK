@@ -211,14 +211,14 @@
   };
   dha: ansi_dollar_and_hash {
     compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_AT";
+    label = "ANSI_DOLLAR_HASH";
     #binding-cells = <0>;
     bindings = <&kp DOLLAR>, <&kp HASH>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   aha: ansi_at_and_hash {
     compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_AT";
+    label = "ANSI_AT_HASH";
     #binding-cells = <0>;
     bindings = <&kp AT>, <&kp HASH>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
