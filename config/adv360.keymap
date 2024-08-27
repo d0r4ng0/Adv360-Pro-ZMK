@@ -11,7 +11,8 @@
 #define SYMJ 4
 #define SYM  5
 #define DEF  6
-#define DEFR 7
+#define DJIS 7
+#define BJIS 8
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS LS(INT1) BACKSPACE DELETE>;
@@ -70,11 +71,11 @@
 
         default_layer {
           bindings = <
-            &aha       &n1a      &n2a      &n3a      &n4a       &n5a   &tog KP                                                                   &mo MOD   &n6a    &n7a    &n8a       &n9a       &n0a        &kp BSLH
-            &kp EQUAL  &kp Q     &kp W     &kp E     &kp R      &kp T  &tog DEFR                                                                 &tog DEF  &kp Y   &kp U   &kp I      &kp O      &kp P       &kp MINUS
-            &kp ESC    &kp A     &kp S     &kp D     &kp F      &kp G  &kp CAPS             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &tog FN   &kp H   &kp J   &kp K      &kp L      &kp SEMI    &kp SQT
-            &td_sft    &kp Z     &kp X     &kp C     &kp V      &kp B                                  &kp DEL    &kp TAB                                  &kp N   &kp M   &kp COMMA  &kp DOT    &kp FSLH    &td_sft
-            &mo FN     &kp CARET &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &mo FN                     &kp UP  &kp DOWN   &kp GRAVE  &kp DOLLAR  &mo FN 
+            &aha       &n1a      &n2a      &n3a      &n4a       &n5a   &tog KP                                                                   &mo MOD    &n6a    &n7a    &n8a       &n9a       &n0a        &kp BSLH
+            &kp EQUAL  &kp Q     &kp W     &kp E     &kp R      &kp T  &tog DEF                                                                  &tog DJIS  &kp Y   &kp U   &kp I      &kp O      &kp P       &kp MINUS
+            &kp ESC    &kp A     &kp S     &kp D     &kp F      &kp G  &kp CAPS             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &tog BJIS  &kp H   &kp J   &kp K      &kp L      &kp SEMI    &kp SQT
+            &td_sft    &kp Z     &kp X     &kp C     &kp V      &kp B                                  &kp DEL    &kp TAB                                   &kp N   &kp M   &kp COMMA  &kp DOT    &kp FSLH    &td_sft
+            &mo FN     &kp CARET &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &mo FN                      &kp UP  &kp DOWN   &kp GRAVE  &kp DOLLAR  &mo FN 
           >;
         };
 
@@ -92,7 +93,7 @@
           bindings = <
             &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6 &tog KP                                                &mo MOD  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
             &trans  &trans  &trans  &trans  &trans  &trans &none                                                  &none    &trans  &trans  &trans  &trans   &trans   &trans
-            &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5 &none          &trans  &trans  &trans  &trans          &tog FN  &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &trans
+            &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5 &none          &trans  &trans  &trans  &trans          &none    &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &trans
             &trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans                           &trans  &trans  &trans  &trans   &trans   &trans
             &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans   &trans
           >;
@@ -130,21 +131,31 @@
 
         layer_qwerty {
           bindings = <
-            &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5 &tog KP                                                              &mo MOD   &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-            &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &tog DEFR                                                            &tog DEF  &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &tog FN   &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-            &sk LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &kp HOME &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &sk RSHFT
-            &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE                &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
+            &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5 &tog KP                                                              &mo MOD    &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+            &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &tog DEF                                                             &tog DJIS  &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &tog BJIS  &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+            &sk LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &kp HOME &kp PG_UP                                &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &sk RSHFT
+            &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE                   &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
           >;
         };
 
         layer_qwerty_reverse {
           bindings = <
-            &ahj     &kp N1 &kp N2         &kp N3    &kp N4     &kp N5  &tog KP                                                                   &mo MOD   &kp N6  &kp N7  &kp N8     &kp N9     &kp N0    &bpj
-            &epj     &kp Q  &kp W          &kp E     &kp R      &kp T   &tog DEFR                                                                 &tog DEF  &kp Y   &kp U   &kp I      &kp O      &kp P     &muj
-            &gtj     &kp A  &kp S          &kp D     &kp F      &kp G   &kp CAPS             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &tog FN   &kp H   &kp J   &kp K      &kp L      &scj      &qdj
-            &td_sft  &kp Z  &kp X          &kp C     &kp V      &kp B                                   &kp DEL    &kp TAB                                  &kp N   &kp M   &kp COMMA  &kp DOT    &kp FSLH  &td_sft
-            &mo FN   &caj   &mt LGUI CAPS  &kp LEFT  &kp RIGHT                     &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &kp ESC                    &kp UP  &kp DOWN   &tog DEFR  &dhj      &mo FN 
+            &ahj     &kp N1 &kp N2    &kp N3    &kp N4     &kp N5  &tog KP                                                                   &mo MOD    &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &bpj
+            &epj     &kp Q  &kp W     &kp E     &kp R      &kp T   &tog DEF                                                                  &tog DJIS  &kp Y   &kp U   &kp I      &kp O    &kp P     &muj
+            &kp ESC  &kp A  &kp S     &kp D     &kp F      &kp G   &kp CAPS             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &tog BJIS  &kp H   &kp J   &kp K      &kp L    &scj      &qdj
+            &td_sft  &kp Z  &kp X     &kp C     &kp V      &kp B                                   &kp DEL    &kp TAB                                   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &td_sft
+            &mo FN   &caj   &kp LGUI  &kp LEFT  &kp RIGHT                     &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &mo FN                      &kp UP  &kp DOWN   &gtj     &dhj      &mo FN 
+          >;
+        };
+
+        default_layer_jis {
+          bindings = <
+            &ahj     &n1j   &n2j      &n3j      &n4j       &n5j   &tog KP                                                                 &mo MOD    &n6j   &n7j    &n8j       &n9j     &n0j      &bpj
+            &epj     &kp Q  &kp W     &kp E     &kp R      &kp T  &tog DEF                                                                &tog DJIS  &kp Y  &kp U   &kp I      &kp O    &kp P     &muj
+            &kp ESC  &kp A  &kp S     &kp D     &kp F      &kp G  &kp CAOS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL          &tog BJIS  &kp H  &kp J   &kp K      &kp L    &scj      &qdj
+            &td_sft  &kp Z  &kp X     &kp C     &kp V      &kp B                                 &kp DEL    &kp TAB                                  &kp N  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &td_sft
+            &mo FN   &caj   &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &mo FN                    &kp UP  &kp DOWN   &gtj     &dhj      &mo FN 
           >;
         };
     };
