@@ -85,7 +85,7 @@
             &kp TAB  &kp Q      &kp W     &kp E     &kp R      &kp T   &to BASE                                                                  &to DJIS  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH 
             &kp ESC  &kp A      &kp S     &kp D     &kp F      &kp G   &kp CAPS           &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &to BJIS  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
             &mo FN   &kp Z      &kp X     &kp C     &kp V      &kp B                                 &kp DEL    &kp TAB                                    &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &mo FN
-            &none    &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &td_sft  &kp BSPC   &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                    &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &none 
+            &none    &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC &td_sft    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                    &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &none 
           >;
         };
 
