@@ -131,6 +131,13 @@
     bindings = <&kp LEFT_BRACKET>, <&kp HASH>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+  cdj: ansi_caret_and_dollar_with_jis {
+    compatible = "zmk,behavior-mod-morph";
+    label = "ANSI_CARET_DOLLAR_WITH_JIS";
+    #binding-cells = <0>;
+    bindings = <&kp EQUAL>, <&kp DOLLAR>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
 
   n1a: ansi_n1_and_exclamation {
     compatible = "zmk,behavior-mod-morph";
@@ -221,5 +228,12 @@
     label = "ANSI_AT_HASH";
     #binding-cells = <0>;
     bindings = <&kp AT>, <&kp HASH>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  cda: ansi_caret_and_dollar {
+    compatible = "zmk,behavior-mod-morph";
+    label = "ANSI_CARET_DOLLAR";
+    #binding-cells = <0>;
+    bindings = <&kp CARET>, <&kp DOLLAR>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };

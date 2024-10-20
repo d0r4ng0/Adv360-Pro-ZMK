@@ -8,12 +8,13 @@
 #define SYMJ  1
 #define SYM   2
 #define DEF   3
-#define DJIS  4
+#define BREV  4
 #define BJIS  5
-#define KP    6
-#define FN    7
-#define FNJIS 8
-#define MOD   9
+#define BLNX  6
+#define KP    7
+#define FN    8
+#define FNJIS 9
+#define MOD   10
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS LS(INT1) BACKSPACE DELETE>;
@@ -72,10 +73,10 @@
 
         default_layer {
           bindings = <
-            &kp TAB    &n1a       &n2a      &n3a      &n4a       &n5a   &tog KP                                                                    &mo MOD   &n6a    &n7a    &n8a       &n9a      &n0a      &kp BSLH
-            &kp EQUAL  &kp Q      &kp W     &kp E     &kp R      &kp T  &to BASE                                                                   &to DJIS  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp MINUS
-            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &to BJIS  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-            &kp CARET  &kp Z      &kp X     &kp C     &kp V      &kp B                                 &kp DEL    &kp TAB                                    &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp DOLLAR
+            &aha       &n1a       &n2a      &n3a      &n4a       &n5a   &tog KP                                                                    &mo MOD   &n6a    &n7a    &n8a       &n9a      &n0a      &kp BSLH
+            &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &to BASE                                                                   &to BJIS  &kp Y   &kp U   &kp I      &kp O     &kp P     &cda
+            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &to BLNX  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+            &kp EQUAL  &kp Z      &kp X     &kp C     &kp V      &kp B                                 &kp DEL    &mo FN                                     &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp MINUS
             &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &td_sft                      &kp UP  &kp DOWN   &kp LALT  &aha      &mo FN 
           >;
         };
@@ -122,21 +123,31 @@
 
         layer_qwerty_reverse {
           bindings = <
-            &kp TAB    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog KP                                                                   &mo MOD   &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp BSLH
-            &kp EQUAL  &kp Q      &kp W     &kp E     &kp R      &kp T   &to BASE                                                                  &to DJIS  &kp Y   &kp U   &kp I      &kp O    &kp P     &kp MINUS
-            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &kp CAPS             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &to BJIS  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-            &kp CARET  &kp Z      &kp X     &kp C     &kp V      &kp B                                   &kp DEL    &kp TAB                                  &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp DOLLAR
+            &aha       &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog KP                                                                   &mo MOD   &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp BSLH
+            &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &to BASE                                                                  &to BJIS  &kp Y   &kp U   &kp I      &kp O    &kp P     &cda 
+            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &kp CAPS             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &to BLNX  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+            &kp EQUAL  &kp Z      &kp X     &kp C     &kp V      &kp B                                   &kp DEL    &mo FN                                   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
             &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                     &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &td_sft                    &kp UP  &kp LBKT   &kp RBKT &kp LALT  &mo FN 
           >;
         };
 
         default_layer_jis {
           bindings = <
-            &kp TAB    &n1j   &n2j      &n3j      &n4j       &n5j   &tog KP                                                                  &mo MOD   &n6j   &n7j    &n8j       &n9j      &n0j      &bpj
-            &epj       &kp Q  &kp W     &kp E     &kp R      &kp T  &to BASE                                                                 &to DJIS  &kp Y  &kp U   &kp I      &kp O     &kp P     &muj
-            &kp ESC    &kp A  &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &to BJIS  &kp H  &kp J   &kp K      &kp L     &scj      &qdj
-            &kp EQUAL  &kp Z  &kp X     &kp C     &kp V      &kp B                                 &kp DEL    &kp TAB                                  &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp DOLLAR
-            &mo FNJIS  &gtj   &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &td_sft                   &kp UP  &kp DOWN   &kp LGUI  &kp LALT  &mo FNJIS 
+            &ahj       &n1j   &n2j      &n3j      &n4j       &n5j   &tog KP                                                                  &mo MOD   &n6j   &n7j    &n8j       &n9j      &n0j      &bpj
+            &kp TAB    &kp Q  &kp W     &kp E     &kp R      &kp T  &to BASE                                                                 &to BJIS  &kp Y  &kp U   &kp I      &kp O     &kp P     &cdj
+            &kp ESC    &kp A  &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &to BLNX  &kp H  &kp J   &kp K      &kp L     &scj      &qdj
+            &epj       &kp Z  &kp X     &kp C     &kp V      &kp B                                 &kp DEL    &mo FNJIS                                &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &muj
+            &mo FNJIS  &gtj   &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &td_sft                   &kp UP  &kp DOWN   &kp LALT  &ahj      &mo FNJIS 
+          >;
+        };
+
+        default_layer_linux {
+          bindings = <
+            &aha       &n1a       &n2a      &n3a      &n4a       &n5a   &tog KP                                                                    &mo MOD   &n6a    &n7a    &n8a       &n9a      &n0a      &kp BSLH
+            &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &to BASE                                                                   &to BJIS  &kp Y   &kp U   &kp I      &kp O     &kp P     &cda
+            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &to BLNX  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+            &kp EQUAL  &kp Z      &kp X     &kp C     &kp V      &kp B                                 &kp DEL    &mo FN                                     &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp MINUS
+            &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp SPACE  &kp INT5   &kp INT4  &kp ENTER  &td_sft                       &kp UP  &kp DOWN   &kp LALT  &aha      &mo FN 
           >;
         };
 
@@ -152,11 +163,11 @@
 
         layer_fn {
           bindings = <
-            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6 &tog KP                                                                         &mo MOD  &kp F7     &kp F8  &kp F9    &kp F10     &kp F11  &kp F12
-            &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5 &none                                                                           &none    &kp N6     &kp N7  &kp N8    &kp N9      &kp N0   &trans
-            &trans  &trans  &trans  &trans  &trans  &trans &none          &trans  &trans                &trans             &trans          &none    &kp CARET  &kp AT  &kp HASH  &kp DOLLAR  &trans   &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                             &trans     &trans  &trans    &trans      &trans   &trans
-            &trans  &trans  &trans  &trans  &trans                &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans           &trans     &trans  &trans    &trans      &trans
+            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog KP                                                                         &mo MOD  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+            &trans  &trans  &trans  &trans  &trans  &trans  &none                                                                           &none    &trans  &trans  &trans  &trans   &trans   &trans
+            &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none          &trans  &trans                &trans             &trans          &none    &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                         &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                             &trans  &trans  &trans  &trans   &trans   &trans
+            &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans           &trans  &trans  &trans  &trans   &trans
           >;
         };
 
@@ -172,11 +183,11 @@
 
         layer_fn_jis {
           bindings = <
-            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6 &tog KP                                                                         &mo MOD  &kp F7     &kp F8    &kp F9    &kp F10     &kp F11  &kp F12
-            &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5 &none                                                                           &none    &kp N6     &kp N7    &kp N8    &kp N9      &kp N0   &trans
-            &trans  &trans  &trans  &trans  &trans  &trans &none          &trans  &trans                &trans             &trans          &none    &kp EQUAL  &kp LBKT  &kp HASH  &kp DOLLAR  &trans   &trans
-            &trans  &trans  &trans  &trans  &trans  &trans                        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                             &trans     &trans    &trans    &trans      &trans   &trans
-            &trans  &trans  &trans  &trans  &trans                &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans           &trans     &trans    &trans    &trans      &trans
+            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog KP                                                                         &mo MOD  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+            &trans  &trans  &trans  &trans  &trans  &trans  &none                                                                           &none    &trans  &trans  &trans  &trans   &trans   &trans
+            &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none          &trans  &trans                &trans             &trans          &none    &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                         &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                             &trans  &trans  &trans  &trans   &trans   &trans
+            &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans           &trans  &trans  &trans  &trans   &trans
           >;
         };
 
