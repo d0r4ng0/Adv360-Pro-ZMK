@@ -87,7 +87,7 @@
             &kp EQUAL   &kp Q      &kp W     &kp E        &kp R      &kp T  &to BASE                                                                 &to BJIS  &kp Y  &kp U   &kp I      &kp O     &kp P     &kp MINUS
             &mm FN TAB  &kp A      &kp S     &kp D        &kp F      &kp G  &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &to BLNX  &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
             &td_sft     &kp Z      &kp X     &kp C        &kp V      &kp B                                 &mo FN     &kp DEL                                  &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &td_sft 
-            &mo FN      &kp GRAVE  &kp LGUI  &kp LEFT     &kp RIGHT                   &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &kp ESC                   &kp UP  &kp DOWN   &kp LALT  &kp BSLH  &mo FN 
+            &kp LGUI    &kp GRAVE  &kp LGUI  &kp LEFT     &kp RIGHT                   &kp BSPC  &kp ESC    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                 &kp UP  &kp DOWN   &kp LALT  &kp BSLH  &mo FN 
           >;
         };
 
@@ -137,7 +137,7 @@
             &kp EQUAL   &kp Q      &kp W     &kp E     &kp R      &kp T   &to BASE                                                                 &to BJIS  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp MINUS
             &mm FN TAB  &kp A      &kp S     &kp D     &kp F      &kp G   &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &to BLNX  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
             &td_sft     &kp Z      &kp X     &kp C     &kp V      &kp B                                  &mo FN     &kp DEL                                  &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &td_sft
-            &mo FN      &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &kp ESC                    &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo FN 
+            &kp LGUI    &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC  &kp ESC    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                  &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo FN 
           >;
         };
 
@@ -147,7 +147,7 @@
             &epj           &kp Q  &kp W     &kp E     &kp R      &kp T  &to BASE                                                                 &to BJIS  &kp Y  &kp U   &kp I      &kp O     &kp P     &muj
             &mm FNJIS TAB  &kp A  &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &to BLNX  &kp H  &kp J   &kp K      &kp L     &scj      &qdj
             &td_sft        &kp Z  &kp X     &kp C     &kp V      &kp B                                 &mo FNJIS  &kp DEL                                  &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &td_sft
-            &mo FNJIS      &gtj   &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp SPACE  &kp LANG2  &kp LANG1  &kp ENTER  &kp ESC                   &kp UP  &kp DOWN   &kp LALT  &bpj      &mo FNJIS 
+            &kp LGUI       &gtj   &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp ESC    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                 &kp UP  &kp DOWN   &kp LALT  &bpj      &mo FNJIS 
           >;
         };
 
@@ -157,7 +157,7 @@
             &kp EQUAL   &kp Q      &kp W     &kp E     &kp R      &kp T  &to BASE                                                                 &to BJIS  &kp Y  &kp U   &kp I      &kp O     &kp P     &kp MINUS
             &mm FN TAB  &kp A      &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL  &kp LALT   &kp LGUI  &kp RCTRL            &to BLNX  &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
             &td_sft     &kp Z      &kp X     &kp C     &kp V      &kp B                                 &mo FN     &kp DEL                                  &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &td_sft
-            &mo FN      &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp SPACE  &kp INT5   &kp INT4  &kp ENTER  &kp ESC                    &kp UP  &kp DOWN   &kp LALT  &kp BSLH  &mo FN 
+            &kp LGUI    &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &kp ESC    &kp INT5   &kp INT4  &kp ENTER  &kp SPACE                  &kp UP  &kp DOWN   &kp LALT  &kp BSLH  &mo FN 
           >;
         };
 
