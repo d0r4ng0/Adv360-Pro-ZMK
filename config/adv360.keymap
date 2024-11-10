@@ -18,7 +18,7 @@
 
 #define LCS LC(LSHFT)
 #define RCS RC(RSHFT)
-#define HYP LC(LS(LA(LG)))
+#define HYP LC(LS(LA(LGUI)))
 #define MEH LC(LS(LALT))
 
 &caps_word {
@@ -98,11 +98,11 @@
 
         default_layer {
           bindings = <
-            &caa          &n1a       &n2a      &n3a         &n4a       &n5a   &tog KP                                                                    &mo MOD   &n6a   &n7a    &n8a       &n9a      &n0a      &dha
-            &kp EQUAL     &kp Q      &kp W     &kp E        &kp R      &kp T  &to BASE                                                                   &to BJIS  &kp Y  &kp U   &kp I      &kp O     &kp P     &kp MINUS
-            &kp ESC       &kp A      &kp S     &kp D        &kp F      &kp G  &mo FN              &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &mo FN    &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-            &hm3 MEH TAB  &kp Z      &kp X     &kp C        &kp V      &kp B                                 &kp LCS    &kp RCS                                    &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &hm3 MEH BSLH 
-            &kp HYP       &kp GRAVE  &kp LGUI  &kp LEFT     &kp RIGHT                   &kp BSPC  &td_sft    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                   &kp UP  &kp DOWN   &kp LALT  &kp DEL   &kp HYP 
+            &caa          &n1a       &n2a      &n3a      &n4a       &n5a   &tog KP                                                                    &mo MOD   &n6a   &n7a    &n8a       &n9a      &n0a      &dha
+            &kp EQUAL     &kp Q      &kp W     &kp E     &kp R      &kp T  &to BASE                                                                   &to BJIS  &kp Y  &kp U   &kp I      &kp O     &kp P     &kp MINUS
+            &kp ESC       &kp A      &kp S     &kp D     &kp F      &kp G  &mo FN              &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &mo FN    &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+            &hm3 MEH TAB  &kp Z      &kp X     &kp C     &kp V      &kp B                                 &kp LCS    &kp RCS                                    &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &hm3 MEH BSLH 
+            &kp HYP       &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &td_sft    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                   &kp UP  &kp DOWN   &kp LALT  &kp DEL   &kp HYP 
           >;
         };
 
