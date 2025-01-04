@@ -82,6 +82,20 @@
     bindings = <&kp SEMICOLON>, <&kp SINGLE_QUOTE>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+  lbbj: ansi_left_bracket_and_left_brace_with_jis {
+    compatible = "zmk,behavior-mod-morph";
+    label = "ANSI_LEFT_BRACKET_WITH_JIS";
+    #binding-cells = <0>;
+    bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  rbbj: ansi_right_bracket_and_right_brace_with_jis {
+    compatible = "zmk,behavior-mod-morph";
+    label = "ANSI_RIGHT_BRACKET_WITH_JIS";
+    #binding-cells = <0>;
+    bindings = <&kp BACKSLASH>, <&kp PIPE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
   caj: ansi_caret_and_at_with_jis {
     compatible = "zmk,behavior-mod-morph";
     label = "ANSI_CARET_WITH_JIS";

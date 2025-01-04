@@ -1,0 +1,38 @@
+bt0: bt0 {
+  label = "&BT0";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  tap-ms = <50>;
+  wait-ms = <50>;
+  bindings
+  /* switch mouse */
+  = <&macro_press>
+  , <&kp RG(LG(N4))>
+  , <&macro_release>
+  , <&kp RG(LG(N4))>
+  , <&macro_wait_time 50>
+  /* switch keyboard */
+  , <&macro_press>
+  , <&bt BT_SEL 0>
+  , <&macro_release>
+  , <&bt BT_SEL 0>;
+};
+bt1: bt1 {
+  label = "&BT1";
+  compatible = "zmk,behavior-macro";
+  #binding-cells = <0>;
+  tap-ms = <50>;
+  wait-ms = <50>;
+  bindings
+  /* switch mouse */
+  = <&macro_press>
+  , <&kp RG(LG(N5))>
+  , <&macro_release>
+  , <&kp RG(LG(N5))>
+  , <&macro_wait_time 50>
+  /* switch keyboard */
+  , <&macro_press>
+  , <&bt BT_SEL 1>
+  , <&macro_release>
+  , <&bt BT_SEL 1>;
+};
