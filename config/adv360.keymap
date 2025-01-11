@@ -25,7 +25,7 @@
 #define CAD LC(LA(DEL))
 #define CAI LC(LA(INS))
 #define SI  LS(INS)
-#define GT  LG(TAB)
+#define ST  LG(TAB)
 #define GG  LG(GRAVE)
 
 &caps_word {
