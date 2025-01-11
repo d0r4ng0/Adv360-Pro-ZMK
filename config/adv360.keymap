@@ -110,7 +110,7 @@
             &kp TAB   &kp Q   &kp W   &kp E    &kp R     &kp T &to BASE                                                               &to BREV &kp Y &kp U    &kp I     &kp O    &kp P    &kp BSLH
             &kp ESC   &kp A   &kp S   &kp D    &kp F     &kp G &to DEF           &kp LCTRL &kp LGUI     &kp RGUI  &kp RCTRL           &to BJIS &kp H &kp J    &kp K     &kp L    &kp SEMI &kp SQT
             &kp GRAVE &kp Z   &kp X   &kp C    &kp V     &kp B                             &kp LALT     &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &kp DEL
-            &kp LCS   &kp caa &mo SYM &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &mt FN LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    &mo SYM  &dha     &kp RCS 
+            &kp LCS   &kp caa &mo SYM &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &lt FN LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    &mo SYM  &dha     &kp RCS 
           >;
         };
 
