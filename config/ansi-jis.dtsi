@@ -296,3 +296,11 @@
     bindings = <&kp DOUBLE_QUOTES>, <&kp N0>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+
+  mm: mod_morph {
+    compatible = "zmk,behavior-mod-morph";
+    label = "MOD_MORPH";
+    #binding-cells = <0>;
+    bindings = <&kp>, <&kp>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
