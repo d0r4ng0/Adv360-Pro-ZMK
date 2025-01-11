@@ -96,111 +96,111 @@
 
         /* default_layer { */
         /*   bindings = < */
-        /*     &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5 &tog KP                                                              &mo MOD   &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp BSLH */
-        /*     &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &tog DEFR                                                            &tog DEF  &kp Y  &kp U  &kp I     &kp O    &kp P    &kp MINUS */
-        /*     &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &kp CAPS            &kp LCTRL &kp LALT   &kp LGUI  &kp RCTRL         &tog FN   &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT */
-        /*     &td_sft    &kp Z      &kp X     &kp C     &kp V      &kp B                                &kp DEL    &kp TAB                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &td_sft  */
-        /*     &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC &mo FN    &kp LANG2  &kp LANG1 &kp ENTER &kp SPACE                &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN */
-        /*   >; */
-        /* }; */
-
-        /* default_layer { */
-        /*   bindings = < */
-        /*     &kp EQUAL  &n1ar      &n2ar     &n3ar     &n4ar      &n5ar  &tog KP                                                                    &mo MOD   &n6ar  &n7ar   &n8ar      &n9ar     &n0ar     &kp MINUS */
-        /*     &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &to BASE                                                                   &to BREV  &kp Y  &kp U   &kp I      &kp O     &kp P     &kp BSLH */
-        /*     &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &to DEF             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &to BJIS  &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT */
-        /*     &caa       &kp Z      &kp X     &kp C     &kp V      &kp B                                 &kp LCS    &kp RCS                                    &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &dha */
-        /*     &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &td_sft    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                   &kp UP  &kp DOWN   &kp LALT  &kp DEL   &mo FN  */
+        /*     &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &tog KP                                                              &mo MOD  &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp BSLH */
+        /*     &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T  &tog DEFR                                                            &tog DEF &kp Y  &kp U  &kp I     &kp O    &kp P    &kp MINUS */
+        /*     &kp ESC   &kp A     &kp S    &kp D    &kp F     &kp G  &kp CAPS           &kp LCTRL &kp LALT  &kp LGUI  &kp RCTRL           &tog FN  &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT */
+        /*     &td_sft   &kp Z     &kp X    &kp C    &kp V     &kp B                               &kp DEL   &kp TAB                                &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &td_sft  */
+        /*     &mo FN    &kp GRAVE &kp LGUI &kp LEFT &kp RIGHT                  &kp BSPC &mo FN    &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN */
         /*   >; */
         /* }; */
 
         default_layer {
           bindings = <
-            &kp GRAVE  &kp N1   &kp N2     &kp N3    &kp N4    &kp N5  &kp LBKT                                                                   &kp RBKT  &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp BSLH 
-            &kp TAB    &kp Q    &kp W      &kp E     &kp R     &kp T   &kp LBRC                                                                   &kp RBRC  &kp Y   &kp U     &kp I      &kp O     &kp P     &kp MINUS 
-            &kp ESC    &kp A    &kp S      &kp D     &kp F     &kp G   &kp LPAR            &kp LCTRL  &kp LGUI   &kp RGUI   &kp RCTRL             &kp RPAR  &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
-            &mo DEL    &kp Z    &kp X      &kp C     &kp V     &kp B                                  &kp LALT   &kp RALT                                   &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp EQUAL
-            &kp LCS    &mo SYM  &tog BJIS  &kp LEFT  &kp RIGHT                   &kp BSPC  &td_sft    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                    &kp DOWN  &kp UP     &mo MOD   &mo SYM   &kp LCS 
+            &kp EQUAL &n1ar   &n2ar   &n3ar    &n4ar     &n5ar &tog KP                                                                &mo MOD  &n6ar &n7ar    &n8ar     &n9ar    &n0ar    &kp MINUS
+            &kp TAB   &kp Q   &kp W   &kp E    &kp R     &kp T &to BASE                                                               &to BREV &kp Y &kp U    &kp I     &kp O    &kp P    &kp BSLH
+            &kp ESC   &kp A   &kp S   &kp D    &kp F     &kp G &to DEF           &kp LCTRL &kp LGUI     &kp RGUI  &kp RCTRL           &to BJIS &kp H &kp J    &kp K     &kp L    &kp SEMI &kp SQT
+            &kp GRAVE &kp Z   &kp X   &kp C    &kp V     &kp B                             &kp LALT     &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &kp DEL
+            &kp LCS   &kp caa &mo SYM &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &mt FN LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    &mo SYM  &dha     &kp RCS 
           >;
         };
 
+        /* default_layer { */
+        /*   bindings = < */
+        /*     &kp EQUAL &kp N1    &kp N2    &kp N3   &kp N4    &kp N5 &ktog KP                                                            &mo MOD  &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS  */
+        /*     &kp TAB   &kp Q     &kp W     &kp E    &kp R     &kp T  &to BASE                                                            &to BJIS &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH  */
+        /*     &kp ESC   &kp A     &kp S     &kp D    &kp F     &kp G  &to DEF           &kp LCTRL &kp LGUI  &kp RGUI  &kp RCTRL           &kp RPAR &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT */
+        /*     &td_sft   &kp Z     &kp X     &kp C    &kp V     &kp B                              &kp LALT  &kp RALT                               &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &td_sft */
+        /*     &kp LCS   &kp GRAVE &tog BJIS &kp LEFT &kp RIGHT                 &kp BSPC &mo SYM   &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &mo MOD  &mo SYM  &kp LCS  */
+        /*   >; */
+        /* }; */
+
         layer_symbol_with_jis {
           bindings = <
-            &kp CAD  &kp F1  &kp F2       &kp F3    &kp F4    &kp F5  &none                                            &none  &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &kp F11
-            &kp CAI  &none   &none        &kp RBRC  &kp PIPE  &none   &none                                            &none  &none     &none     &none   &none      &none    &kp F12
-            &kp SI   &none   &kp UNDER    &kp STAR  &kp LPAR  &none   &none         &none  &none  &none  &none         &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none    &kp F13
-            &none    &none   &kp KP_PLUS  &kp RBKT  &kp BSLH  &none                        &none  &none                       &none     &none     &none   &none      &none    &kp F14
-            &none    &none   &none        &none     &none                    &none  &none  &none  &none  &none  &none                   &none     &none   &none      &none    &kp F15
+            &kp CAD &kp F1 &kp F2      &kp F3   &kp F4   &kp F5 &none                                     &none &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
+            &kp CAI &none  &none       &kp RBRC &kp PIPE &none  &none                                     &none &none    &none    &none  &none     &none   &kp F12
+            &kp SI  &none  &kp UNDER   &kp STAR &kp LPAR &none  &none       &none &none &none &none       &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none   &kp F13
+            &none   &none  &kp KP_PLUS &kp RBKT &kp BSLH &none                    &none &none                   &none    &none    &none  &none     &none   &kp F14
+            &none   &none  &none       &none    &none                 &none &none &none &none &none &none                &none    &none  &none     &none   &kp F15
           >;
         };
 
         layer_symbol {
           bindings = <
-            &kp CAD  &kp F1  &kp F2     &kp F3    &kp F4    &kp F5  &none                                            &none  &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &kp F11
-            &kp CAI  &none   &none      &kp LBRC  &kp RBRC  &none   &none                                            &none  &none     &none     &none   &none      &none    &kp F12
-            &kp SI   &none   &kp EQUAL  &kp LPAR  &kp RPAR  &none   &none         &none  &none  &none  &none         &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none    &kp F13
-            &none    &none   &kp UNDER  &kp LBKT  &kp RBKT  &none                        &none  &none                       &none     &none     &none   &none      &none    &kp F14
-            &none    &none   &none      &none     &none                    &none  &none  &none  &none  &none  &none                   &none     &none   &none      &none    &kp F15
+            &kp GRAVE &kp F1    &kp F2    &kp F3    &kp F4   &kp F5    &none                                              &none &kp F6 &kp F7   &kp F8   &kp F9    &kp F10  &kp F11
+            &kp EXCL  &kp COMMA &kp SQT   &kp DQT   &kp SEMI &kp QMARK &none                                              &none &none  &kp LBRC &kp RBRC &none     &kp AT   &kp F12
+            &kp HASH  &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp STAR  &none       &none &none &kp DOT &kp STAR           &none &none  &kp LPAR &kp RPAR &kp PRCNT &kp AMPS &kp F13
+            &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp FSLH                    &none &none                            &none  &kp LBKT &kp RBKT &none     &none    &kp F14
+            &none     &none     &none     &none     &none                    &none &none &none &none   &kp COLON &kp SEMI              &none    &none    &none     &none    &kp F15
           >;
         };
 
         layer_qwerty {
           bindings = <
-            &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5 &tog KP                                                                &mo MOD   &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-            &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &to BASE                                                               &to BJIS  &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &kp MEH              &kp LCTRL &kp LALT  &kp LGUI  &kp RCTRL           &kp HYP   &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-            &sk LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                 &kp HOME  &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &sk RSHFT
-            &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC  &kp DEL   &kp END   &kp PG_DN &kp ENTER &kp SPACE                  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
+            &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &tog KP                                                            &mo MOD  &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+            &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T  &to BASE                                                           &to BJIS &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+            &kp ESC   &kp A     &kp S    &kp D    &kp F     &kp G  &kp MEH           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &kp HYP  &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+            &sk LSHFT &kp Z     &kp X    &kp C    &kp V     &kp B                              &kp HOME &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &sk RSHFT
+            &mo FN    &kp GRAVE &kp LGUI &kp LEFT &kp RIGHT                 &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
           >;
         };
 
         layer_qwerty_reverse {
           bindings = <
-            &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog KP                                                                    &mo MOD   &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-            &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &to BASE                                                                   &to BREV  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &to DEF             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL             &to BJIS  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-            &caa       &kp Z      &kp X     &kp C     &kp V      &kp B                                  &kp LCS    &kp RCS                                    &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &dha
-            &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                    &kp BSPC  &td_sft    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                    &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo FN 
+            &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &tog KP                                                             &mo MOD  &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+            &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T  &to BASE                                                            &to BREV &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+            &kp ESC   &kp A     &kp S    &kp D    &kp F     &kp G  &to DEF           &kp LCTRL &kp LALT  &kp LGUI  &kp RCTRL           &to BJIS &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+            &caa      &kp Z     &kp X    &kp C    &kp V     &kp B                              &kp LCS   &kp RCS                                &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &dha
+            &mo FN    &kp GRAVE &kp LGUI &kp LEFT &kp RIGHT                 &kp BSPC &td_sft   &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN 
           >;
         };
 
         default_layer_jis {
           bindings = <
-            &gtj      &kp N1    &n2j       &kp N3    &kp N4     &kp N5 &kp RBKT                                                                   &kp BSLH  &n6j   &n7j      &n8j       &n9j     &n0j      &bpj
-            &kp TAB   &kp Q     &kp W      &kp E     &kp R      &kp T  &kp RBRC                                                                   &kp PIPE  &kp Y  &kp U     &kp I      &kp O    &kp P     &muj
-            &kp ESC   &kp A     &kp S      &kp D     &kp F      &kp G  &kp STAR            &kp LCTRL  &kp LGUI   &kp RGUI   &kp RCTRL             &kp LPAR  &kp H  &kp J     &kp K      &kp L    &scj      &qdj
-            &mo DEL   &kp Z     &kp X      &kp C     &kp V      &kp B                                 &kp LALT   &kp RALT                                   &kp N  &kp M     &kp COMMA  &kp DOT  &kp FSLH  &epj
-            &kp LCS   &mo SYMJ  &tog BJIS  &kp LEFT  &kp RIGHT                   &kp BSPC  &td_sft    &kp LANG2  &kp LANG1  &kp ENTER  &kp SPACE                   &kp DOWN  &kp UP     &mo MOD  &mo SYMJ  &kp RCS 
+            &gtj     &kp N1   &n2j      &kp N3   &kp N4    &kp N5 &kp RBKT                                                            &kp BSLH &n6j  &n7j     &n8j      &n9j    &n0j     &bpj
+            &kp TAB  &kp Q    &kp W     &kp E    &kp R     &kp T  &kp RBRC                                                            &kp PIPE &kp Y &kp U    &kp I     &kp O   &kp P    &muj
+            &kp ESC  &kp A    &kp S     &kp D    &kp F     &kp G  &kp STAR          &kp LCTRL &kp LGUI  &kp RGUI  &kp RCTRL           &kp LPAR &kp H &kp J    &kp K     &kp L   &scj     &qdj
+            &mo DEL  &kp Z    &kp X     &kp C    &kp V     &kp B                              &kp LALT  &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT &kp FSLH &epj
+            &kp LCS  &mo SYMJ &tog BJIS &kp LEFT &kp RIGHT                 &kp BSPC &td_sft   &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    &mo MOD &mo SYMJ &kp RCS 
           >;
         };
 
         default_layer_linux {
           bindings = <
-            &kp EQUAL  &n1ar      &n2ar     &n3ar     &n4ar      &n5ar  &tog KP                                                                    &mo MOD   &n6ar  &n7ar   &n8ar      &n9ar     &n0ar     &kp MINUS
-            &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T  &to BASE                                                                   &to BREV  &kp Y  &kp U   &kp I      &kp O     &kp P     &kp BSLH
-            &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G  &to DEF             &kp LCTRL  &kp LALT   &kp LGUI  &kp RCTRL              &to BJIS  &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-            &caa       &kp Z      &kp X     &kp C     &kp V      &kp B                                 &kp LCS    &kp RCS                                    &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &dha
-            &mo FN     &kp GRAVE  &kp LGUI  &kp LEFT  &kp RIGHT                   &kp BSPC  &td_sft    &kp INT5   &kp INT4  &kp ENTER  &kp SPACE                    &kp UP  &kp DOWN   &kp LALT  &kp DEL   &mo FN 
+            &kp EQUAL &n1ar     &n1ar    &n3ar    &n4ar     &n5ar &tog KP                                                            &mo MOD  &n6ar &n7ar  &n8ar     &n9ar    &n0ar    &kp MINUS
+            &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T &to BASE                                                           &to BREV &kp Y &kp U  &kp I     &kp O    &kp P    &kp BSLH
+            &kp ESC   &kp A     &kp S    &kp D    &kp F     &kp G &to DEF           &kp LCTRL &kp LALT &kp LGUI &kp RCTRL            &to BJIS &kp H &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+            &caa      &kp Z     &kp X    &kp C    &kp V     &kp B                             &kp LCS  &kp RCS                                &kp N &kp M  &kp COMMA &kp DOT  &kp FSLH &dha
+            &mo FN    &kp GRAVE &kp LGUI &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &kp INT5 &kp INT4 &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LALT &kp DEL  &mo FN 
           >;
         };
 
         layer_keypad {
           bindings = <
-            &kp GRAVE  &kp N1   &kp N2     &kp N3    &kp N4    &kp N5  &tog KP                                                                 &mo MOD  &kp N6  &kp KP_NUM  &kp N8     &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-            &kp TAB    &kp Q    &kp W      &kp E     &kp R     &kp T   &none                                                                   &none    &kp Y   &kp KP_N7   &kp KP_N8  &kp KP_N9      &kp KP_MINUS     &kp LEFT_BRACKET
-            &kp CAPS   &kp A    &kp S      &kp D     &kp F     &kp G   &none             &kp LCTRL  &kp LALT  &kp LGUI   &kp RCTRL             &none    &kp H   &kp KP_N4   &kp KP_N5  &kp KP_N6      &kp KP_PLUS      &kp SINGLE_QUOTE
-            &sk LSHFT  &kp Z    &kp X      &kp C     &kp V     &kp B                                &kp HOME  &kp PG_UP                                 &kp N   &kp KP_N1   &kp KP_N2  &kp KP_N3      &kp KP_ENTER     &sk RSHFT
-            &mo FN     &kp ESC  &kp EQUAL  &kp LEFT  &kp RIGHT                 &kp BSPC  &kp DEL    &kp END   &kp PG_DN  &kp ENTER  &kp KP_N0                   &kp UP      &kp DOWN   &kp KP_DOT     &kp KP_ENTER     &mo FN
+            &kp GRAVE &kp N1   &kp N2    &kp N3   &kp N4    &kp N5 &tog KP                                                           &mo MOD &kp N6 &kp KP_NUM &kp N8    &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+            &kp TAB   &kp Q    &kp W     &kp E    &kp R     &kp T  &none                                                             &none   &kp Y  &kp KP_N7  &kp KP_N8 &kp KP_N9     &kp KP_MINUS    &kp LEFT_BRACKET
+            &kp CAPS  &kp A    &kp S     &kp D    &kp F     &kp G  &none            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none   &kp H  &kp KP_N4  &kp KP_N5 &kp KP_N6     &kp KP_PLUS     &kp SINGLE_QUOTE
+            &sk LSHFT &kp Z    &kp X     &kp C    &kp V     &kp B                             &kp HOME &kp PG_UP                             &kp N  &kp KP_N1  &kp KP_N2 &kp KP_N3     &kp KP_ENTER    &sk RSHFT
+            &mo FN    &kp ESC  &kp EQUAL &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0                &kp UP     &kp DOWN  &kp KP_DOT    &kp KP_ENTER    &mo FN
           >;
         };
 
         layer_fn {
           bindings = <
-            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog KP                                                                           &mo MOD  &kp F7    &kp F8    &kp F9  &kp F10   &kp F11   &kp F12
-            &trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &none                                                                             &none    &trans    &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F13
-            &trans  &trans  &kp N4  &kp N4  &kp N6  &trans  &none          &trans  &trans                &trans             &trans            &none    &kp SPACE &kp N4    &kp N5  &kp N6    &kp STAR  &kp F14
-            &trans  &kp N0  &kp N1  &kp N2  &kp N3  &trans                         &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                               &trans    &kp N1    &kp N2  &kp N3    &kp MINUS &kp F15
-            &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &kp KP_N0                    &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F16
+            &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog KP                                                                        &mo MOD &kp F7    &kp F8    &kp F9  &kp F10   &kp F11   &kp F12
+            &trans &trans &kp N7 &kp N8 &kp N9 &trans &none                                                                          &none   &trans    &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F13
+            &trans &trans &kp N4 &kp N4 &kp N6 &trans &none           &trans &trans               &trans            &trans           &none   &kp DOT   &kp N4    &kp N5  &kp N6    &kp STAR  &kp F14
+            &trans &kp N0 &kp N1 &kp N2 &kp N3 &trans                        &kp C_BRIGHTNESS_INC &kp C_VOLUME_UP                            &kp SPACE &kp N1    &kp N2  &kp N3    &kp MINUS &kp F15
+            &trans &trans &trans &trans &trans                &trans  &trans &kp C_BRIGHTNESS_DEC &kp C_VOLUME_DOWN &trans &kp KP_N0                   &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F16
          >;
         };
 
@@ -216,11 +216,11 @@
 
         layer_fn_jis {
           bindings = <
-            &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog KP                                                                         &mo MOD  &kp F7    &kp F8    &kp F9  &kp F10   &kp F11   &kp F12
-            &trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &none                                                                           &none    &trans    &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F13
-            &trans  &trans  &kp N4  &kp N6  &kp N7  &trans  &none          &trans  &trans                &trans             &trans          &none    &kp SPACE &kp N4    &kp N5  &kp N6    &kp DQT   &kp F14
-            &trans  &kp N0  &kp N1  &kp N2  &kp N3  &trans                         &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                             &trans    &kp N1    &kp N2  &kp N3    &kp MINUS &kp F15
-            &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &kp N0                     &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F16
+            &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog KP                                                                   &mo MOD &kp F7    &kp F8    &kp F9  &kp F10   &kp F11   &kp F12
+            &trans &trans &kp N7 &kp N8 &kp N9 &trans &none                                                                     &none   &trans    &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F13
+            &trans &trans &kp N4 &kp N6 &kp N7 &trans &none         &trans &trans               &trans            &trans        &none   &kp SPACE &kp N4    &kp N5  &kp N6    &kp DQT   &kp F14
+            &trans &kp N0 &kp N1 &kp N2 &kp N3 &trans                      &kp C_BRIGHTNESS_INC &kp C_VOLUME_UP                         &trans    &kp N1    &kp N2  &kp N3    &kp MINUS &kp F15
+            &trans &trans &trans &trans &trans               &trans &trans &kp C_BRIGHTNESS_DEC &kp C_VOLUME_DOWN &trans &kp N0                   &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F16
           >;
         };
 
