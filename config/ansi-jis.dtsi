@@ -297,7 +297,7 @@
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
-  ctld: lctl_dot {
+  ctrld: lctrl_dot {
     compatible = "zmk,behavior-mod-morph";
     label = "LCTRL_DOT";
     #binding-cells = <0>;
