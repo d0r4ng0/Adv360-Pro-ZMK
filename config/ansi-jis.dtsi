@@ -304,3 +304,45 @@
     bindings = <&kp LCTRL>, <&kp DOT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+  comcom: comma_comma {
+    compatible = "zmk,behavior-mod-morph";
+    label = "COMMA_COMMA";
+    #binding-cells = <0>;
+    bindings = <&kp COMMA>, <&kp COMMA>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  dotdot: dot_dot {
+    compatible = "zmk,behavior-mod-morph";
+    label = "DOT_DOT";
+    #binding-cells = <0>;
+    bindings = <&kp DOT>, <&kp DOT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  ltgra: lt_grave {
+    compatible = "zmk,behavior-mod-morph";
+    label = "LT_GRAVE";
+    #binding-cells = <0>;
+    bindings = <&kp LT>, <&kp GRAVE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  gttld: gt_tilde {
+    compatible = "zmk,behavior-mod-morph";
+    label = "GT_TILDE";
+    #binding-cells = <0>;
+    bindings = <&kp GT>, <&kp TILDE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  ltgraj: lt_grave_with_jis {
+    compatible = "zmk,behavior-mod-morph";
+    label = "LT_GRAVE_WITH_JIS";
+    #binding-cells = <0>;
+    bindings = <&kp LT>, <&kp LEFT_BRACE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  gttldj: gt_tilde_with_jis {
+    compatible = "zmk,behavior-mod-morph";
+    label = "GT_TILDE_WITH_JIS";
+    #binding-cells = <0>;
+    bindings = <&kp GT>, <&kp PLUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
