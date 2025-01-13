@@ -7,9 +7,9 @@ bt0: bt0 {
   bindings
   /* switch mouse */
   = <&macro_press>
-  , <&kp RG(LG(N4))>
+  , <&kp F13>
   , <&macro_release>
-  , <&kp RG(LG(N4))>
+  , <&kp F13>
   , <&macro_wait_time 50>
   /* switch keyboard */
   , <&macro_press>
@@ -26,9 +26,9 @@ bt1: bt1 {
   bindings
   /* switch mouse */
   = <&macro_press>
-  , <&kp RG(LG(N5))>
+  , <&kp F14>
   , <&macro_release>
-  , <&kp RG(LG(N5))>
+  , <&kp F14>
   , <&macro_wait_time 50>
   /* switch keyboard */
   , <&macro_press>
