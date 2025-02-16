@@ -203,7 +203,7 @@
             &kp GRAVE &kp N1 &kp N2  &kp N3   &kp N4    &kp N5 &tog KP                                                                 &mo MOD  &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp BSLH
             &kp EQUAL &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                                &to JISR &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
             &kp ESC   &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &lg_f19       &rg_h6    &kp TAB             &to JIS  &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-            &lta      &kp Z  &kp X   &kp C    &kp V     &kp B                              &la_f20       &ra_h7                                 &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gta
+            &ltlt     &kp Z  &kp X   &kp C    &kp V     &kp B                              &la_f20       &ra_h7                                 &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gtgt
             &kp INS   &caa   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC &td_sft   &lt SYM LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &mo RCS &dha     &kp DEL 
           >;
         };
