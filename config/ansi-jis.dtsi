@@ -224,7 +224,20 @@
     bindings = <&kp CARET>, <&kp DOLLAR>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-
+  ltlt: ansi_lt_and_lt {
+    compatible = "zmk,behavior-mod-morph";
+    label = "ANSI_LT_LT";
+    #binding-cells = <0>;
+    bindings = <&kp LT>, <&kp LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  gtgt: ansi_gt_and_gt {
+    compatible = "zmk,behavior-mod-morph";
+    label = "ANSI_GT_GT";
+    #binding-cells = <0>;
+    bindings = <&kp GT>, <&kp GT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
 
   n1jr: ansi_n1_and_exclamation_with_jis {
     compatible = "zmk,behavior-mod-morph";

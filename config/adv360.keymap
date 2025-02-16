@@ -28,6 +28,8 @@
 #define SI  LS(INS)
 #define ST  LG(TAB)
 #define GG  LG(GRAVE)
+#define HYP6 LC(LS(LA(LG(N6))))
+#define HYP7 LC(LS(LA(LG(N7))))
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS LS(INT1) BACKSPACE DELETE>;
@@ -89,6 +91,47 @@
         tapping-term-ms = <200>;
         bindings = <&sk LSHFT>, <&caps_word>;
       };
+
+      rg_h6: rgui_hyper6 {
+          compatible = "zmk,behavior-hold-tap";
+          label = "RGUI_HYP6";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <180>;
+          flavor = "hold-preferred";
+          bindings = <&kp RGUI>, <&kp HYP6>;
+      };
+
+      ra_h7: ralt_hyper7 {
+          compatible = "zmk,behavior-hold-tap";
+          label = "RALT_HYP7";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <180>;
+          flavor = "hold-preferred";
+          bindings = <&kp RALT>, <&kp HYP7>;
+      };
+
+      lg_f19: lgui_f19 {
+          compatible = "zmk,behavior-hold-tap";
+          label = "LGUI_F19";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <180>;
+          flavor = "hold-preferred";
+          bindings = <&kp LGUI>, <&kp F19>;
+      };
+
+      la_f20: lalt_f20 {
+          compatible = "zmk,behavior-hold-tap";
+          label = "LALT_F20";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <180>;
+          flavor = "hold-preferred";
+          bindings = <&kp LALT>, <&kp F20>;
+      };
+
     };
 
     keymap {
@@ -107,11 +150,11 @@
 
         default_layer {
           bindings = <
-            &kp GRAVE &n1ar &n2ar   &n3ar    &n4ar     &n5ar &tog KP                                                                  &mo MOD  &n6ar &n7ar    &n8ar   &n9ar    &n0ar    &kp BSLH
-            &kp EQUAL &kp Q &kp W   &kp E    &kp R     &kp T &to BREV                                                                 &to JISR &kp Y &kp U    &kp I   &kp O    &kp P    &kp MINUS
-            &kp ESC   &kp A &kp S   &kp D    &kp F     &kp G &to BASE          &kp LCTRL &kp LGUI      &kp RGUI  &kp TAB              &to JIS  &kp H &kp J    &kp K   &kp L    &kp SEMI &kp SQT
-            &ltgra    &kp Z &kp X   &kp C    &kp V     &kp B                             &kp LALT      &kp RALT                                &kp N &kp M    &comcom &dotdot  &kp FSLH &gttld
-            &kp INS   &caa  &kp LCS &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &lt SYM LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP  &kp RCS  &dha     &kp DEL 
+            &kp GRAVE &n1ar   &n2ar &n3ar    &n4ar     &n5ar &tog KP                                                                  &mo MOD  &n6ar &n7ar    &n8ar   &n9ar   &n0ar    &kp BSLH
+            &kp EQUAL &kp Q   &kp W &kp E    &kp R     &kp T &to BREV                                                                 &to JISR &kp Y &kp U    &kp I   &kp O   &kp P    &kp MINUS
+            &kp ESC   &kp A   &kp S &kp D    &kp F     &kp G &to BASE          &kp LCTRL &lg_f19       &rg_h6    &kp TAB              &to JIS  &kp H &kp J    &kp K   &kp L   &kp SEMI &kp SQT
+            &ltlt     &kp Z   &kp X &kp C    &kp V     &kp B                             &la_f20       &ra_h7                                  &kp N &kp M    &comcom &dotdot &kp FSLH &gtgt
+            &kp INS   &kp LCS &caa  &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &lt SYM LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP  &dha    &kp RCS  &kp DEL 
           >;
         };
 
@@ -157,11 +200,11 @@
 
         layer_qwerty_reverse {
           bindings = <
-            &kp GRAVE &kp N1 &kp N2  &kp N3   &kp N4    &kp N5 &tog KP                                                                 &mo MOD  &kp N6 &kp N7 &kp N8    &kp N9  &kp N0   &kp BSLH
-            &kp EQUAL &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                                &to JISR &kp Y  &kp U  &kp I     &kp O   &kp P    &kp MINUS
-            &kp ESC   &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &kp LGUI      &kp RGUI  &kp TAB             &to JIS  &kp H  &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-            &ltgra    &kp Z  &kp X   &kp C    &kp V     &kp B                              &kp LALT      &kp RALT                               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &gttld
-            &kp INS   &caa   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC &td_sft   &lt SYM LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &mo DEL &dha     &kp DEL 
+            &kp GRAVE &kp N1 &kp N2  &kp N3   &kp N4    &kp N5 &tog KP                                                                 &mo MOD  &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp BSLH
+            &kp EQUAL &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                                &to JISR &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
+            &kp ESC   &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &lg_f19       &rg_h6    &kp TAB             &to JIS  &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+            &lta      &kp Z  &kp X   &kp C    &kp V     &kp B                              &la_f20       &ra_h7                                 &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gta
+            &kp INS   &caa   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC &td_sft   &lt SYM LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &mo RCS &dha     &kp DEL 
           >;
         };
 
@@ -169,8 +212,8 @@
           bindings = <
             &gtj    &n1jr &n2jr   &n3jr    &n4jr     &n5jr &tog KP                                                                  &mo MOD  &n6jr &n7jr    &n8jr   &n9jr   &n0jr    &bpj
             &epj    &kp Q &kp W   &kp E    &kp R     &kp T &to BREV                                                                 &to JISR &kp Y &kp U    &kp I   &kp O   &kp P    &muj
-            &kp ESC &kp A &kp S   &kp D    &kp F     &kp G &to BASE          &kp LCTRL &kp LGUI       &kp RGUI  &kp TAB             &to JIS  &kp H &kp J    &kp K   &kp L   &scj     &qdj
-            &ltgraj &kp Z &kp X   &kp C    &kp V     &kp B                             &kp LALT       &kp RALT                               &kp N &kp M    &comcom &dotdot &kp FSLH &gttldj
+            &kp ESC &kp A &kp S   &kp D    &kp F     &kp G &to BASE          &kp LCTRL &lg_f19        &rg_h6    &kp TAB             &to JIS  &kp H &kp J    &kp K   &kp L   &scj     &qdj
+            &ltlt   &kp Z &kp X   &kp C    &kp V     &kp B                             &la_f20        &ra_h7                                 &kp N &kp M    &comcom &dotdot &kp FSLH &gtgt
             &kp INS &caj  &kp LCS &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &lt SYMJ LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP  &kp RCS &dhj     &kp DEL 
           >;
         };
@@ -179,8 +222,8 @@
           bindings = <
             &gtj    &kp N1 &n2j    &kp N3   &kp N4    &kp N5 &tog KP                                                                  &mo MOD  &n6j   &n7j     &n8j      &n9j    &n0j     &bpj
             &epj    &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                                 &to JISR &kp Y  &kp U    &kp I     &kp O   &kp P    &muj
-            &kp ESC &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &kp LGUI       &kp RGUI  &kp TAB             &to JIS  &kp H  &kp J    &kp K     &kp L   &scj     &qdj
-            &ltgraj &kp Z  &kp X   &kp C    &kp V     &kp B                              &kp LALT       &kp RALT                               &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gttldj
+            &kp ESC &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &lg_f19        &rg_h6    &kp TAB             &to JIS  &kp H  &kp J    &kp K     &kp L   &scj     &qdj
+            &ltlt   &kp Z  &kp X   &kp C    &kp V     &kp B                              &la_f20        &ra_h7                                 &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gtgt
             &kp INS &caj   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC &td_sft   &lt SYMJ LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &kp RCS &dhj     &kp DEL 
           >;
         };
