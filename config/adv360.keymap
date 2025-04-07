@@ -97,24 +97,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-
-        /* default_layer { */
-        /*   bindings = < */
-        /*     &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &tog KP                                                              &mo MOD  &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp BSLH */
-        /*     &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T  &tog DEFR                                                            &tog DEF &kp Y  &kp U  &kp I     &kp O    &kp P    &kp MINUS */
-        /*     &kp ESC   &kp A     &kp S    &kp D    &kp F     &kp G  &kp CAPS           &kp LCTRL &kp LALT  &kp LGUI  &kp RCTRL           &tog FN  &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT */
-        /*     &td_sft   &kp Z     &kp X    &kp C    &kp V     &kp B                               &kp DEL   &kp TAB                                &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &td_sft  */
-        /*     &mo FN    &kp GRAVE &kp LGUI &kp LEFT &kp RIGHT                  &kp BSPC &mo FN    &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN */
-        /*   >; */
-        /* }; */
-
         default_layer {
           bindings = <
-            &kp GRAVE &n1ar   &n2ar &n3ar    &n4ar     &n5ar &tog KP                                                                 &mo MOD  &n6ar &n7ar    &n8ar   &n9ar   &n0ar    &kp BSLH
-            &kp EQUAL &kp Q   &kp W &kp E    &kp R     &kp T &to BREV                                                                &to JISR &kp Y &kp U    &kp I   &kp O   &kp P    &kp MINUS
-            &kp ESC   &kp A   &kp S &kp D    &kp F     &kp G &to BASE          &kp LCTRL &hm3 LGUI F19 &hm3 RGUI HYP6 &kp TAB        &to JIS  &kp H &kp J    &kp K   &kp L   &kp SEMI &kp SQT
-            &ltlt     &kp Z   &kp X &kp C    &kp V     &kp B                             &hm3 LALT F20 &hm3 LGUI HYP7                         &kp N &kp M    &comcom &dotdot &kp FSLH &gtgt
-            &kp INS   &kp LCS &caa  &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &lt SYM LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP  &dha    &kp RCS  &kp DEL 
+            &kp GRAVE &n1ar &n2ar   &n3ar    &n4ar     &n5ar &tog KP                                                                      &mo MOD  &n6ar &n7ar    &n8ar   &n9ar   &n0ar    &kp BSLH
+            &kp EQUAL &kp Q &kp W   &kp E    &kp R     &kp T &to BREV                                                                     &to JISR &kp Y &kp U    &kp I   &kp O   &kp P    &kp MINUS
+            &kp ESC   &kp A &kp S   &kp D    &kp F     &kp G &to BASE          &kp LCTRL &hm3 LGUI F19 &hm3 RGUI HYP6 &kp TAB             &to JIS  &kp H &kp J    &kp K   &kp L   &kp SEMI &kp SQT
+            &ltlt     &kp Z &kp X   &kp C    &kp V     &kp B                             &hm3 LALT F20 &hm3 LGUI HYP7                              &kp N &kp M    &comcom &dotdot &kp FSLH &gtgt
+            &kp INS   &caa  &kp LCS &kp LEFT &kp RIGHT                &kp BSPC &td_sft   &lt SYM LANG2 &lt FN LANG1   &kp ENTER &kp SPACE                &kp DOWN &kp UP  &kp RCS &dha     &kp DEL 
           >;
         };
 
@@ -140,11 +129,11 @@
 
         layer_symbol {
           bindings = <
-            &kp GRAVE &kp F1    &kp F2    &kp F3    &kp F4   &kp F5    &none                                              &none &kp F6 &kp F7   &kp F8   &kp F9    &kp F10  &kp F11
-            &kp EXCL  &kp COMMA &kp SQT   &kp DQT   &kp SEMI &kp QMARK &none                                              &none &none  &kp LBRC &kp RBRC &none     &kp AT   &kp F12
-            &kp HASH  &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp STAR  &none       &none &none &kp DOT &kp STAR           &none &none  &kp LPAR &kp RPAR &kp PRCNT &kp AMPS &kp F13
-            &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp FSLH                    &none &none                            &none  &kp LBKT &kp RBKT &none     &none    &kp F14
-            &none     &none     &none     &none     &none                    &none &none &none &none   &kp COLON &kp SEMI              &none    &none    &none     &none    &kp F15
+            &kp GRAVE &kp N1    &kp N2    &kp N3    &kp N4   &kp N5    &none                                              &none &kp N6  &kp N7   &kp N8   &kp N9    &kp N0 &kp F11
+            &kp AT    &kp COMMA &kp SQT   &kp DQT   &kp SEMI &kp QMARK &none                                              &none &none   &kp LBRC &kp RBRC &none     &none  &kp F12
+            &kp HASH  &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp STAR  &none       &none &none &kp DOT &kp STAR           &none &kp DOT &kp LPAR &kp RPAR &kp COMMA &none  &kp F13
+            &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp FSLH                    &none &none                            &none   &kp LBKT &kp RBKT &none     &none  &kp F14
+            &none     &none     &none     &none     &none                    &none &none &none &none   &kp COLON &kp SEMI               &none    &none    &none     &none  &kp F15
           >;
         };
 
@@ -164,7 +153,7 @@
             &kp EQUAL &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                                &to JISR &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
             &kp ESC   &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &hm3 LGUI F19 &hm3 RGUI HYP6 &kp TAB        &to JIS  &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
             &ltlt     &kp Z  &kp X   &kp C    &kp V     &kp B                              &hm3 LALT F20 &hm3 RALT HYP7                         &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gtgt
-            &kp INS   &caa   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC &td_sft   &lt SYM LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &mo RCS &dha     &kp DEL 
+            &kp INS   &caa   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC &td_sft   &lt SYM LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &kp RCS &dha     &kp DEL 
           >;
         };
 
@@ -210,11 +199,11 @@
 
         layer_fn {
           bindings = <
-            &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog KP                                                                        &mo MOD &kp F7    &kp F8    &kp F9  &kp F10   &kp F11   &kp F12
-            &trans &trans &kp N7 &kp N8 &kp N9 &trans &none                                                                          &none   &trans    &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F13
-            &trans &trans &kp N4 &kp N4 &kp N6 &trans &none           &trans &trans               &trans            &trans           &none   &kp DOT   &kp N4    &kp N5  &kp N6    &kp STAR  &kp F14
-            &trans &kp N0 &kp N1 &kp N2 &kp N3 &trans                        &kp C_BRIGHTNESS_INC &kp C_VOLUME_UP                            &kp SPACE &kp N1    &kp N2  &kp N3    &kp MINUS &kp F15
-            &trans &trans &trans &trans &trans                &trans  &trans &kp C_BRIGHTNESS_DEC &kp C_VOLUME_DOWN &trans &kp KP_N0                   &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F16
+            &trans   &kp F1    &kp F2   &kp F3     &kp F4       &kp F5       &tog KP                                              &mo MOD &kp F6    &kp F7    &kp F8  &kp F9    &kp F10   &kp F11
+            &trans   &kp PG_UP &kp HOME &kp C_PREV &kp C_BRI_UP &kp C_VOL_UP &none                                                &none   &trans    &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F12
+            &kp SLCK &kp PG_DN &kp END  &kp C_NEXT &kp C_BRI_DN &kp C_VOL_DN &none          &trans &trans &trans &trans           &none   &kp DOT   &kp N4    &kp N5  &kp N6    &kp STAR  &kp F13
+            &trans   &trans    &trans   &kp C_PP   &trans       &kp C_MUTE                         &trans &trans                          &kp SPACE &kp N1    &kp N2  &kp N3    &kp MINUS &kp F14
+            &trans   &trans    &trans   &trans     &trans                            &trans &trans &trans &trans &trans &kp KP_N0                   &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F15
          >;
         };
 
