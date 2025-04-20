@@ -88,7 +88,7 @@ ZMK_ADAPTIVE_KEY(
       #include "ansi-jis.dtsi"
       #include "switch_bt.dtsi"
       
-      mv: macro_ver {
+      mv: macro_version {
         compatible = "zmk,behavior-macro";
         label = "macro_version";
         #binding-cells = <0>;
