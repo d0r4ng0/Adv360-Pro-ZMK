@@ -14,23 +14,23 @@ manifest:
 
     # ZMK modules
     - name: zmk-adaptive-key
-      remove: urob
+      remote: urob
       revision: v0.2
       path: modules/zmk/adaptive-key
     - name: zmk-auto-layer
-      remove: urob
+      remote: urob
       revision: v0.2
       path: modules/zmk/auto-layer
     - name: zmk-helpers
-      remove: urob
+      remote: urob
       revision: v0.2
       path: modules/zmk/helpers
     - name: zmk-leader-key
-      remove: urob
+      remote: urob
       revision: v0.2
       path: modules/zmk/leader-key
     - name: zmk-tri-state
-      remove: urob
+      remote: urob
       revision: v0.2
       path: modules/zmk/tri-state
   self:
