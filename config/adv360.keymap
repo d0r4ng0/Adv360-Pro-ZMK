@@ -219,9 +219,9 @@ ZMK_ADAPTIVE_KEY(
           bindings = <
             &gtj    &kp N1 &n2j    &kp N3   &kp N4    &kp N5 &tog KP                                                                        &mo MOD  &n6j   &n7j     &n8j      &n9j    &n0j     &bpj
             &epj    &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                                       &to JISR &kp Y  &kp U    &kp I     &kp O   &kp P    &muj
-            &kp ESC &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &hm3 LGUI F19 &hm3 RGUI HYP6 &kp TAB               &to JIS  &kp H  &kp J    &kp K     &kp L   &scj     &qdj
-            &ltlt   &kp Z  &kp X   &kp C    &kp V     &kp B                              &hm3 LALT F20 &hm3 RALT HYP7                                &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gtgt
-            &kp INS &caj   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC MSHIFT   &lt SYMJ LANG2 &lt FnJIS LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &kp RCS &dhj     &kp DEL 
+            &kp ESC &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &hm3 LGUI F19  &hm3 RGUI HYP6 &kp TAB               &to JIS  &kp H  &kp J    &kp K     &kp L   &scj     &qdj
+            &ltlt   &kp Z  &kp X   &kp C    &kp V     &kp B                              &hm3 LALT F20  &hm3 RALT HYP7                                &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gtgt
+            &kp INS &caj   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC MSHIFT    &lt SYMJ LANG2 &lt FNJIS LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &kp RCS &dhj     &kp DEL 
           >;
         };
 
