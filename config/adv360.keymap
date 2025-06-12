@@ -48,8 +48,8 @@
 #define XXX &none
 #define ___ &trans
 
-#define JRBR "BSLS"
-#define JLBR "RBRC"
+#define JRBR BSLS
+#define JLBR RBRC
 
 /* Global defaults */
 
