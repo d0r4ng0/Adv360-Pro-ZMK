@@ -118,19 +118,13 @@
           bindings = <&kp>, <&kp>;
       };
 
-      msl: magic_shift {
+      ms: magic_shift {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&sk LSHFT>, <&caps_word>;
       };
 
-      msr: magic_shift {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&sk RSHFT>, <&caps_word>;
-      };
     };
 
     keymap {
@@ -143,7 +137,7 @@
             MJ_EP        &kp Q &kp W &kp E    &kp R     &kp T &to BREV                                                            &to AREV &kp Y  &kp U    &kp I  &kp O  &kp P    MJ_MU
             &kp ESC      &kp A &kp S &kp D    &kp F     &kp G &to BASE          &kp LANG2 &kp LCTRL &kp RCTRL &kp LANG1           &to ANSI &kp H  &kp J    &kp K  &kp L  MJ_SC    MJ_QD
             &kp SYMJ     &kp Z &kp X &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N  &kp M    MM_CC  MM_DD  &kp FSLH &kp SYMJ
-            &hm LCS HYP7 MJ_GT MJ_PA &kp LEFT &kp RIGHT                &kp BSPC &msr      &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                 &kp DOWN &kp UP MJ_EG  MJ_AL    &hm RCS HYP6 
+            &hm LCS HYP7 MJ_GT MJ_PA &kp LEFT &kp RIGHT                &kp BSPC &ms       &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                 &kp DOWN &kp UP MJ_EG  MJ_AL    &hm RCS HYP6 
           >;
         };
 
@@ -154,7 +148,7 @@
             MJ_EP        &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                            &to AREV &kp Y  &kp U    &kp I     &kp O    &kp P    MJ_MU
             &kp ESC      &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LANG2 &kp LCTRL &kp RCTRL &kp LANG1           &to ANSI &kp H  &kp J    &kp K     &kp L    MJ_SC    MJ_QD
             &kp SYMJ     &kp Z  &kp X   &kp C    &kp V     &kp B                              &kp LALT  &kp RALT                               &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp SYMJ
-            &hm LCS HYP7 MJ_GT  &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &msr      &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                 &kp DOWN &kp UP    JP_LBRC  JP_RBRC  &hm RCS HYP6 
+            &hm LCS HYP7 MJ_GT  &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                 &kp DOWN &kp UP    JP_LBRC  JP_RBRC  &hm RCS HYP6 
           >;
         };
 
@@ -165,7 +159,7 @@
             &kp EQUAL    &kp Q     &kp W &kp E    &kp R     &kp T &to BREV                                                            &to AREV &kp Y &kp U    &kp I  &kp O &kp P    &kp MINUS
             &kp ESC      &kp A     &kp S &kp D    &kp F     &kp G &to BASE          &kp LANG2 &kp LCTRL &kp RCTRL &kp LANG1           &to ANSI &kp H &kp J    &kp K  &kp L &kp SEMI &kp SQT
             &kp SYM      &kp Z     &kp X &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N &kp M    MM_CC  MM_DD &kp FSLH &kp SYM
-            &hm LCS HYP7 &kp GRAVE MM_PA &kp LEFT &kp RIGHT                &kp BSPC &msr      &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                &kp DOWN &kp UP MM_EG MM_AL    &hm RCS HYP6 
+            &hm LCS HYP7 &kp GRAVE MM_PA &kp LEFT &kp RIGHT                &kp BSPC &ms       &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                &kp DOWN &kp UP MM_EG MM_AL    &hm RCS HYP6 
           >;
         };
 
@@ -176,7 +170,7 @@
             &kp EQUAL    &kp Q     &kp W   &kp E    &kp R     &kp T  &to BREV                                                           &to AREV &kp Y  &kp U    &kp I     &kp O    &kp P    &kp MINUS
             &kp ESC      &kp A     &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LANG2 &kp LCTRL &hm RCTRL &kp LANG1          &to ANSI &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
             &kp SYM      &kp Z     &kp X   &kp C    &kp V     &kp B                              &kp LALT  &hm RALT                              &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp SYM
-            &hm LCS HYP7 &kp GRAVE &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &msr      &ko LGUI  &kp RGUI  &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp LBKT &kp RBKT &hm RCS HYP6 
+            &hm LCS HYP7 &kp GRAVE &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &ko LGUI  &kp RGUI  &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp LBKT &kp RBKT &hm RCS HYP6 
           >;
         };
 
