@@ -39,11 +39,7 @@
 #define W_PSC LG(PSCRN)
 #define S_DEL LS(DEL)
 
-#define BT0 "BT_SEL 0"
-#define BT1 "BT_SEL 1"
-#define BT2 "BT_SEL 2"
-#define BT3 "BT_SEL 3"
-#define BT4 "BT_SEL 4"
+#define BS BT_SEL
 
 #define XXX &none
 #define ___ &trans
@@ -230,11 +226,11 @@
         layer_mod {
           display-name = "Mod";
           bindings = <
-            XXX &bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 XXX                                                           ___                    XXX  XXX        XXX        XXX XXX XXX
-            XXX XXX     XXX     XXX     XXX     XXX     &bootloader                                                   &bootloader            XXX  XXX        XXX        XXX XXX XXX
-            XXX &bt0    &bt1    XXX     XXX     XXX     XXX             XXX XXX &bt BT_CLR XXX                        &rgb_ug RGB_MEFS_CMD 5 XXX  XXX        XXX        XXX XXX XXX
-            XXX XXX     XXX     XXX     &mv     XXX                         XXX XXX                                                          XXX  XXX        XXX        XXX XXX XXX
-            XXX XXX     XXX     XXX     XXX                         XXX XXX XXX XXX        &bl BL_TOG &rgb_ug RGB_TOG                             &bl BL_INC &bl BL_DEC XXX XXX XXX
+            XXX &bt BS 0 &bt BS 1 &bt BS 2 &bt BS 3 &bt BS 4 XXX                                                           ___                    XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX      XXX      XXX      XXX      XXX      &bootloader                                                   &bootloader            XXX  XXX        XXX        XXX XXX XXX
+            XXX &bt0     &bt1     XXX      XXX      XXX      XXX             XXX XXX &bt BT_CLR XXX                        &rgb_ug RGB_MEFS_CMD 5 XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX      XXX      XXX      &mv      XXX                          XXX XXX                                                          XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX      XXX      XXX      XXX                           XXX XXX XXX XXX        &bl BL_TOG &rgb_ug RGB_TOG                             &bl BL_INC &bl BL_DEC XXX XXX XXX
           >;
         };
 
