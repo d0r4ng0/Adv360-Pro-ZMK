@@ -164,7 +164,7 @@
             &kp EQUAL    &kp Q     &kp W   &kp E    &kp R     &kp T  &to BREV                                                           &to AREV &kp Y  &kp U    &kp I     &kp O    &kp P    &kp MINUS
             &kp ESC      &kp A     &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LANG2 &kp LCTRL &hm RCTRL &kp LANG1          &to ANSI &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
             &mo SYM      &kp Z     &kp X   &kp C    &kp V     &kp B                              &kp LALT  &hm RALT                              &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &mo SYM
-            &hm LCS HYP7 &kp GRAVE &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &ko LGUI  &kp RGUI  &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp LBKT &kp RBKT &hm RCS HYP6 
+            &hm LCS HYP7 &kp GRAVE &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp LBKT &kp RBKT &hm RCS HYP6 
           >;
         };
 
