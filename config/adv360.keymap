@@ -34,8 +34,6 @@
 #define GG  LG(GRAVE)
 #define HYP6 LC(LS(LA(LG(N6))))
 #define HYP7 LC(LS(LA(LG(N7))))
-#define COPY LC(INS)
-#define PSTE LS(INS)
 #define C_PD LC(PG_DN)
 #define C_PU LC(PG_UP)
 #define W_PSC LG(PSCRN)
@@ -50,8 +48,8 @@
 #define XXX &none
 #define ___ &trans
 
-#define JP_RBRC &kp BSLS
-#define JP_LBRC &kp RBRC
+#define JP_RBRC "&kp BSLS"
+#define JP_LBRC "&kp RBRC"
 
 /* Global defaults */
 
