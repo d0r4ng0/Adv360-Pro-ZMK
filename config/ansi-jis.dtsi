@@ -1,361 +1,453 @@
-  n2j: ansi_n2_and_at_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N2_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp N2>, <&kp LEFT_BRACKET>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n6j: ansi_n6_and_caret_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N6_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp N6>, <&kp EQUAL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n7j: ansi_n7_and_ampersand_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N7_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp N7>, <&kp CARET>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n8j: ansi_n8_and_asterisk_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N8_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp N8>, <&kp DOUBLE_QUOTES>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n9j: ansi_n9_and_left_parenthesis_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N9_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp N9>, <&kp ASTERISK>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n0j: ansi_n0_and_right_parenthesis_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N0_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp N0>, <&kp LEFT_PARENTHESIS>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  gtj: ansi_grave_and_tilde_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_GRAVE_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp LEFT_BRACE>, <&kp PLUS>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  epj: ansi_equal_and_plus_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_EQUAL_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp UNDERSCORE>, <&kp LS(SEMI)>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  muj: ansi_minus_and_underscore_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_MINUS_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp MINUS>, <&kp LS(INT1)>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  bpj: ansi_backslash_and_pipe_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_BACKSLASH_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp INT3>, <&kp LS(INT3)>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  qdj: ansi_quote_and_doublequote_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_QUOTE_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp AMPERSAND>, <&kp AT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  scj: ansi_semicolon_and_colon_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_SEMICOLON_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp SEMICOLON>, <&kp SINGLE_QUOTE>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  lbbj: ansi_left_bracket_and_left_brace_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_LEFT_BRACKET_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  rbbj: ansi_right_bracket_and_right_brace_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_RIGHT_BRACKET_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp BACKSLASH>, <&kp PIPE>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  caj: ansi_caret_and_at_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_CARET_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp EQUAL>, <&kp LEFT_BRACKET>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  dhj: ansi_dollar_and_hash_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_DOLLAR_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp DOLLAR>, <&kp HASH>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  ahj: ansi_at_and_hash_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_AT_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp LEFT_BRACKET>, <&kp HASH>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  cdj: ansi_caret_and_dollar_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_CARET_DOLLAR_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp EQUAL>, <&kp DOLLAR>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
+// Define mod-morph with a *single* mod trigger for less repetition.
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2)                            \
+  ZMK_MOD_MORPH(NAME, mods = <(MOD_L##MOD | MOD_R##MOD)>;                      \
+                bindings = <BINDING1>, <BINDING2>;)
 
+/* Programmer's Qwerty shifts morphs */
+SIMPLE_MORPH(star_n1,         SFT, STAR,  N1      )
+SIMPLE_MORPH(lbkt_n2,         SFT, LBKT,  N2      )
+SIMPLE_MORPH(lbrc_n3,         SFT, LBRC,  N3      )
+SIMPLE_MORPH(lpar_n4,         SFT, LPAR,  N4      )
+SIMPLE_MORPH(hash_n5,         SFT, HASH,  N5      )
+SIMPLE_MORPH(caret_n6,        SFT, CARET, N6      )
+SIMPLE_MORPH(rpar_n7,         SFT, RPAR,  N7      )
+SIMPLE_MORPH(rbrc_n8,         SFT, RBRC,  N8      )
+SIMPLE_MORPH(rbkt_n9,         SFT, RBKT,  N9      )
+SIMPLE_MORPH(dllr_n0,         SFT, DLLR,  N0      )
+SIMPLE_MORPH(excl_gt,         SFT, EXCL,  GT      )
+SIMPLE_MORPH(at_lt,           SFT, AT,    LT      )
+SIMPLE_MORPH(prcnt_amps,      SFT, PRCNT, AMPS    )
+SIMPLE_MORPH(comma_comma,     SFT, COMMA, COMMA   )
+SIMPLE_MORPH(dot_dot,         SFT, DOT,   DOT     )
+/* Programmer's Qwerty shifts morphs with JIS */
+SIMPLE_MORPH(jis_star_n1,     SFT, DQT,   N1      )
+SIMPLE_MORPH(jis_lbkt_n2,     SFT, RBKT,  N2      )
+SIMPLE_MORPH(jis_lbrc_n3,     SFT, RBRC,  N3      )
+SIMPLE_MORPH(jis_lpar_n4,     SFT, STAR,  N4      )
+SIMPLE_MORPH(jis_hash_n5,     SFT, HASH,  N5      )
+SIMPLE_MORPH(jis_caret_n6,    SFT, EQUAL, N6      )
+SIMPLE_MORPH(jis_rpar_n7,     SFT, LPAR,  N7      )
+SIMPLE_MORPH(jis_rbrc_n8,     SFT, PIPE,  N8      )
+SIMPLE_MORPH(jis_rbkt_n9,     SFT, BSLH,  N9      )
+SIMPLE_MORPH(jis_dllr_n0,     SFT, DLLR,  N0      )
+SIMPLE_MORPH(jis_excl_gt,     SFT, EXCL,  GT      )
+SIMPLE_MORPH(jis_at_lt,       SFT, LBKT,  LT      )
+SIMPLE_MORPH(jis_prcnt_amps,  SFT, PRCNT, CARET   )
+SIMPLE_MORPH(jis_grave_tilde, SFT, LBRC,  PLUS    )
+SIMPLE_MORPH(jis_equal_plus,  SFT, UNDER, LS(SEMI))
+SIMPLE_MORPH(jis_minus_under, SFT, MINUS, LS(INT1))
+SIMPLE_MORPH(jis_bslh_pipe,   SFT, INT3,  LS(INT3))
+SIMPLE_MORPH(jis_sqt_dqt,     SFT, AMPS,  AT      )
+SIMPLE_MORPH(jis_semi_colon,  SFT, SEMI,  SQT     )
+/* Convert from JIS to ANSI */
+SIMPLE_MORPH(aj_n2_at,       SFT, N2, LBKT       )
+SIMPLE_MORPH(aj_n6_caret,    SFT, N6, EQUAL      )
+SIMPLE_MORPH(aj_n7_amps,     SFT, N7, CARET      )
+SIMPLE_MORPH(aj_n8_star,     SFT, N8, DQT        )
+SIMPLE_MORPH(aj_n9_lpar,     SFT, N9, STAR       )
+SIMPLE_MORPH(aj_n0_rpar,     SFT, N0, LPAR       )
 
-  n1ar: ansi_n1_and_exclamation {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N1_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp EXCLAMATION>, <&kp N1>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n2ar: ansi_n2_and_left_bracket {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N2_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp LEFT_BRACKET>, <&kp N2>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n3ar: ansi_n3_and_left_brace {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N3_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp LEFT_BRACE>, <&kp N3>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n4ar: ansi_n4_and_left_parenthesis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N4_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp LEFT_PARENTHESIS>, <&kp N4>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n5ar: ansi_n5_and_percent {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N5_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp PERCENT>, <&kp N5>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n6ar: ansi_n6_and_ampersand {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N6_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp AMPERSAND>, <&kp N6>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n7ar: ansi_n7_and_right_parenthesis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N7_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp RIGHT_PARENTHESIS>, <&kp N7>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n8ar: ansi_n8_and_right_brace {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N8_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp RIGHT_BRACE>, <&kp N8>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n9ar: ansi_n9_and_right_bracket {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N9_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp RIGHT_BRACKET>, <&kp N9>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n0ar: ansi_n0_and_asterisk {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N0_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp ASTERISK>, <&kp N0>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  caa: ansi_caret_and_at {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_EXCLAMATION";
-    #binding-cells = <0>;
-    bindings = <&kp CARET>, <&kp AT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  dha: ansi_dollar_and_hash {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_DOLLAR_HASH";
-    #binding-cells = <0>;
-    bindings = <&kp DOLLAR>, <&kp HASH>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  aha: ansi_at_and_hash {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_AT_HASH";
-    #binding-cells = <0>;
-    bindings = <&kp AT>, <&kp HASH>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  cda: ansi_caret_and_dollar {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_CARET_DOLLAR";
-    #binding-cells = <0>;
-    bindings = <&kp CARET>, <&kp DOLLAR>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  ltlt: ansi_lt_and_lt {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_LT_LT";
-    #binding-cells = <0>;
-    bindings = <&kp LT>, <&kp LT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  gtgt: ansi_gt_and_gt {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_GT_GT";
-    #binding-cells = <0>;
-    bindings = <&kp GT>, <&kp GT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
+#define MM_N1 &star_n1
+#define MM_N2 &lbkt_n2
+#define MM_N3 &lbrc_n3
+#define MM_N4 &lpar_n4
+#define MM_N5 &hash_n5
+#define MM_N6 &caret_n6
+#define MM_N7 &rpar_n7
+#define MM_N8 &rbrc_n8
+#define MM_N9 &rbkt_n9
+#define MM_N0 &dllr_n0
+#define MM_EG &excl_gt
+#define MM_AL &at_lt
+#define MM_PA &prcnt_amps
+#define MM_CC &comma_comma
+#define MM_DD &dot_dot
 
-  n1jr: ansi_n1_and_exclamation_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N1_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp EXCLAMATION>, <&kp N1>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n2jr: ansi_n2_and_left_bracket_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N2_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp RIGHT_BRACKET>, <&kp N2>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n3jr: ansi_n3_and_left_brace_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N3_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp RIGHT_BRACE>, <&kp N3>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n4jr: ansi_n4_and_left_parenthesis_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N4_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp ASTERISK>, <&kp N4>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n5jr: ansi_n5_and_percent_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N5_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp PERCENT>, <&kp N5>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n6jr: ansi_n6_and_ampersand_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N6_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp CARET>, <&kp N6>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n7jr: ansi_n7_and_right_parenthesis_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N7_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp LEFT_PARENTHESIS>, <&kp N7>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n8jr: ansi_n8_and_right_brace_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N8_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp PIPE>, <&kp N8>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n9jr: ansi_n9_and_right_bracket_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N9_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp BACKSLASH>, <&kp N9>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  n0jr: ansi_n0_and_asterisk_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ANSI_N0_WITH_JIS_REVERSE";
-    #binding-cells = <0>;
-    bindings = <&kp DOUBLE_QUOTES>, <&kp N0>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
+#define MJ_N1 &jis_star_n1
+#define MJ_N2 &jis_lbkt_n2
+#define MJ_N3 &jis_lbrc_n3
+#define MJ_N4 &jis_lpar_n4
+#define MJ_N5 &jis_hash_n5
+#define MJ_N6 &jis_caret_n6
+#define MJ_N7 &jis_rpar_n7
+#define MJ_N8 &jis_rbrc_n8
+#define MJ_N9 &jis_rbkt_n9
+#define MJ_N0 &jis_dllr_n0
+#define MJ_EG &jis_excl_gt
+#define MJ_AL &jis_at_lt
+#define MJ_PA &jis_prcnt_amps
+#define MJ_GT &jis_grave_tilde
+#define MJ_EP &jis_equal_plus
+#define MJ_MU &jis_minus_under
+#define MJ_BP &jis_bslh_pipe
+#define MJ_QD &jis_sqt_dqt
+#define MJ_SC &jis_semi_colon
 
-  ctrld: lctrl_dot {
-    compatible = "zmk,behavior-mod-morph";
-    label = "LCTRL_DOT";
-    #binding-cells = <0>;
-    bindings = <&kp LCTRL>, <&kp DOT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  comcom: comma_comma {
-    compatible = "zmk,behavior-mod-morph";
-    label = "COMMA_COMMA";
-    #binding-cells = <0>;
-    bindings = <&kp COMMA>, <&kp COMMA>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  dotdot: dot_dot {
-    compatible = "zmk,behavior-mod-morph";
-    label = "DOT_DOT";
-    #binding-cells = <0>;
-    bindings = <&kp DOT>, <&kp DOT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  ltgra: lt_grave {
-    compatible = "zmk,behavior-mod-morph";
-    label = "LT_GRAVE";
-    #binding-cells = <0>;
-    bindings = <&kp LT>, <&kp GRAVE>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  gttld: gt_tilde {
-    compatible = "zmk,behavior-mod-morph";
-    label = "GT_TILDE";
-    #binding-cells = <0>;
-    bindings = <&kp GT>, <&kp TILDE>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  ltgraj: lt_grave_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "LT_GRAVE_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp LT>, <&kp LEFT_BRACE>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  gttldj: gt_tilde_with_jis {
-    compatible = "zmk,behavior-mod-morph";
-    label = "GT_TILDE_WITH_JIS";
-    #binding-cells = <0>;
-    bindings = <&kp GT>, <&kp PLUS>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
+#define AJ_N2 &aj_n2_at
+#define AJ_N6 &aj_n6_caret
+#define AJ_N7 &aj_n7_amps
+#define AJ_N8 &aj_n8_star
+#define AJ_N9 &aj_n9_lpar
+#define AJ_N0 &aj_n0_rpar
+
+  /* n2j: ansi_n2_and_at_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N2_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp N2>, <&kp LEFT_BRACKET>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n6j: ansi_n6_and_caret_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N6_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp N6>, <&kp EQUAL>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n7j: ansi_n7_and_ampersand_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N7_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp N7>, <&kp CARET>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n8j: ansi_n8_and_asterisk_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N8_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp N8>, <&kp DOUBLE_QUOTES>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n9j: ansi_n9_and_left_parenthesis_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N9_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp N9>, <&kp ASTERISK>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n0j: ansi_n0_and_right_parenthesis_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N0_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp N0>, <&kp LEFT_PARENTHESIS>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* gtj: ansi_grave_and_tilde_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_GRAVE_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LEFT_BRACE>, <&kp PLUS>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* epj: ansi_equal_and_plus_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_EQUAL_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp UNDERSCORE>, <&kp LS(SEMI)>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* muj: ansi_minus_and_underscore_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_MINUS_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp MINUS>, <&kp LS(INT1)>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* bpj: ansi_backslash_and_pipe_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_BACKSLASH_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp INT3>, <&kp LS(INT3)>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* qdj: ansi_quote_and_doublequote_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_QUOTE_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp AMPERSAND>, <&kp AT>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* scj: ansi_semicolon_and_colon_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_SEMICOLON_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp SEMICOLON>, <&kp SINGLE_QUOTE>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* lbbj: ansi_left_bracket_and_left_brace_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_LEFT_BRACKET_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* rbbj: ansi_right_bracket_and_right_brace_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_RIGHT_BRACKET_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp BACKSLASH>, <&kp PIPE>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* caj: ansi_caret_and_at_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_CARET_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp EQUAL>, <&kp LEFT_BRACKET>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* dhj: ansi_dollar_and_hash_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_DOLLAR_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp DOLLAR>, <&kp HASH>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* ahj: ansi_at_and_hash_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_AT_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LEFT_BRACKET>, <&kp HASH>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* cdj: ansi_caret_and_dollar_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_CARET_DOLLAR_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp EQUAL>, <&kp DOLLAR>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /**/
+  /**/
+  /* n1ar: ansi_n1_and_exclamation { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N1_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp EXCLAMATION>, <&kp N1>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n2ar: ansi_n2_and_left_bracket { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N2_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LEFT_BRACKET>, <&kp N2>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n3ar: ansi_n3_and_left_brace { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N3_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LEFT_BRACE>, <&kp N3>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n4ar: ansi_n4_and_left_parenthesis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N4_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LEFT_PARENTHESIS>, <&kp N4>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n5ar: ansi_n5_and_percent { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N5_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp PERCENT>, <&kp N5>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n6ar: ansi_n6_and_ampersand { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N6_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp AMPERSAND>, <&kp N6>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n7ar: ansi_n7_and_right_parenthesis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N7_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp RIGHT_PARENTHESIS>, <&kp N7>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n8ar: ansi_n8_and_right_brace { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N8_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp RIGHT_BRACE>, <&kp N8>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n9ar: ansi_n9_and_right_bracket { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N9_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp RIGHT_BRACKET>, <&kp N9>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n0ar: ansi_n0_and_asterisk { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N0_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp ASTERISK>, <&kp N0>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* caa: ansi_caret_and_at { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_EXCLAMATION"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp CARET>, <&kp AT>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* dha: ansi_dollar_and_hash { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_DOLLAR_HASH"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp DOLLAR>, <&kp HASH>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* aha: ansi_at_and_hash { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_AT_HASH"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp AT>, <&kp HASH>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* cda: ansi_caret_and_dollar { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_CARET_DOLLAR"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp CARET>, <&kp DOLLAR>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* ltlt: ansi_lt_and_lt { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_LT_LT"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LT>, <&kp LT>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* gtgt: ansi_gt_and_gt { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_GT_GT"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp GT>, <&kp GT>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /**/
+  /* n1jr: ansi_n1_and_exclamation_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N1_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp EXCLAMATION>, <&kp N1>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n2jr: ansi_n2_and_left_bracket_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N2_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp RIGHT_BRACKET>, <&kp N2>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n3jr: ansi_n3_and_left_brace_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N3_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp RIGHT_BRACE>, <&kp N3>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n4jr: ansi_n4_and_left_parenthesis_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N4_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp ASTERISK>, <&kp N4>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n5jr: ansi_n5_and_percent_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N5_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp PERCENT>, <&kp N5>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n6jr: ansi_n6_and_ampersand_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N6_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp CARET>, <&kp N6>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n7jr: ansi_n7_and_right_parenthesis_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N7_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LEFT_PARENTHESIS>, <&kp N7>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n8jr: ansi_n8_and_right_brace_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N8_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp PIPE>, <&kp N8>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n9jr: ansi_n9_and_right_bracket_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N9_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp BACKSLASH>, <&kp N9>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* n0jr: ansi_n0_and_asterisk_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "ANSI_N0_WITH_JIS_REVERSE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp DOUBLE_QUOTES>, <&kp N0>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /**/
+  /* ctrld: lctrl_dot { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "LCTRL_DOT"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LCTRL>, <&kp DOT>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* comcom: comma_comma { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "COMMA_COMMA"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp COMMA>, <&kp COMMA>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* dotdot: dot_dot { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "DOT_DOT"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp DOT>, <&kp DOT>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* ltgra: lt_grave { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "LT_GRAVE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LT>, <&kp GRAVE>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* gttld: gt_tilde { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "GT_TILDE"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp GT>, <&kp TILDE>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* ltgraj: lt_grave_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "LT_GRAVE_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp LT>, <&kp LEFT_BRACE>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */
+  /* gttldj: gt_tilde_with_jis { */
+  /*   compatible = "zmk,behavior-mod-morph"; */
+  /*   label = "GT_TILDE_WITH_JIS"; */
+  /*   #binding-cells = <0>; */
+  /*   bindings = <&kp GT>, <&kp PLUS>; */
+  /*   mods = <(MOD_LSFT|MOD_RSFT)>; */
+  /* }; */

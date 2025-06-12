@@ -10,15 +10,15 @@
 #include "include/helper.h"
 
 #define BASE  0
-#define SYMJ  1
-#define SYM   2
-#define DEF   3
-#define BREV  4
-#define JIS   5
-#define JISR  6
+#define BREV  1
+#define ANSI  2
+#define AREV  3
+#define SYMJ  4
+#define SYM   5
+#define DEF   6
 #define KP    7
-#define FN    8
-#define FNJIS 9
+#define FNJ   8
+#define FN    9
 #define MOD   10
 
 #define LCS LC(LSHFT)
@@ -34,9 +34,24 @@
 #define GG  LG(GRAVE)
 #define HYP6 LC(LS(LA(LG(N6))))
 #define HYP7 LC(LS(LA(LG(N7))))
+#define COPY LC(INS)
+#define PSTE LS(INS)
+#define C_PD LC(PG_DN)
+#define C_PU LC(PG_UP)
+#define W_PSC LG(PSCRN)
+#define S_DEL LS(DEL)
+
+#define BT0 "BT_SEL 0"
+#define BT1 "BT_SEL 1"
+#define BT2 "BT_SEL 2"
+#define BT3 "BT_SEL 3"
+#define BT4 "BT_SEL 4"
 
 #define XXX &none
 #define ___ &trans
+
+#define JP_RBRC &kp BSLS
+#define JP_LBRC &kp RBRC
 
 /* Global defaults */
 
@@ -61,7 +76,7 @@
 
 // Tap: repeat after alpha, else sticky-shift |
 // Shift + tap/ double-tap: caps-word | Hold: shift.
-/* #define MSHIFT &magic_shift LSHFT 0 */
+/* #define ms &magic_shift LSHFT 0 */
 /* ZMK_HOLD_TAP(magic_shift, bindings = <&kp>, <&magic_shift_tap>; */
 /*              flavor = "balanced"; tapping-term-ms = <200>; */
 /*              quick-tap-ms = <QUICK_TAP_MS>;) */
@@ -75,10 +90,10 @@
 /*       max-prior-idle-ms = <1200>; */
 /*       strict-modifiers; */
 /*     };) */
-/* &caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase] */
-/*   /delete-property/ ignore-modifiers; */
-/*   continue-list = <UNDERSCORE MINUS LS(INT1) BACKSPACE DELETE>; */
-/* }; */
+&caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
+  /delete-property/ ignore-modifiers;
+  continue-list = <UNDERSCORE MINUS LS(INT1) BACKSPACE DELETE>;
+};
 
 / {
     behaviors {
@@ -104,123 +119,87 @@
           bindings = <&kp>, <&kp>;
       };
 
-      hm2: homerow_mods2 {
-          compatible = "zmk,behavior-hold-tap";
-          label = "HOMEROW_MODS2";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          quick_tap_ms = <180>;
-          flavor = "hold-preferred";
-          bindings = <&mo>, <&kp>;
-      };
-
-      hm3: homerow_mods3 {
-          compatible = "zmk,behavior-hold-tap";
-          label = "HOMEROW_MODS3";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          quick_tap_ms = <180>;
-          flavor = "hold-preferred";
-          bindings = <&kp>, <&kp>;
-      };
-
-      mshift: tap_dance_mod_tap {
+      msl: magic_shift {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&sk LSHFT>, <&caps_word>;
       };
 
+      msr: magic_shift {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&sk RSHFT>, <&caps_word>;
+      };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-          display-name = "Base";
+          display-name = "BASE";
           bindings = <
-            &kp GRAVE &n1ar &n2ar   &n3ar    &n4ar     &n5ar &tog KP                                                                      &mo MOD  &n6ar &n7ar    &n8ar   &n9ar   &n0ar    &kp BSLH
-            &kp EQUAL &kp Q &kp W   &kp E    &kp R     &kp T &to BREV                                                                     &to JISR &kp Y &kp U    &kp I   &kp O   &kp P    &kp MINUS
-            &kp ESC   &kp A &kp S   &kp D    &kp F     &kp G &to BASE          &kp LCTRL &hm3 LGUI F19 &hm3 RGUI HYP6 &kp TAB             &to JIS  &kp H &kp J    &kp K   &kp L   &kp SEMI &kp SQT
-            &ltlt     &kp Z &kp X   &kp C    &kp V     &kp B                             &hm3 LALT F20 &hm3 LGUI HYP7                              &kp N &kp M    &comcom &dotdot &kp FSLH &gtgt
-            &kp INS   &caa  &kp LCS &kp LEFT &kp RIGHT                &kp BSPC &mshift   &lt SYM LANG2 &lt FN LANG1   &kp ENTER &kp SPACE                &kp DOWN &kp UP  &kp RCS &dha     &kp DEL 
+            &kp TAB      MJ_N1 MJ_N2 MJ_N3    MJ_N4     MJ_N5 &tog KP                                                             &mo MOD  MJ_N6  MJ_N7    MJ_N8  MJ_N9  MJ_N0    MJ_BP
+            MJ_EP        &kp Q &kp W &kp E    &kp R     &kp T &to BREV                                                            &to AREV &kp Y  &kp U    &kp I  &kp O  &kp P    MJ_MU
+            &kp ESC      &kp A &kp S &kp D    &kp F     &kp G &to BASE          &kp LANG2 &kp LCTRL &kp RCTRL &kp LANG1           &to ANSI &kp H  &kp J    &kp K  &kp L  MJ_SC    MJ_QD
+            &kp SYMJ     &kp Z &kp X &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N  &kp M    MM_CC  MM_DD  &kp FSLH &kp SYMJ
+            &hm LCS HYP7 MJ_GT MJ_PA &kp LEFT &kp RIGHT                &kp BSPC &msr      &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                 &kp DOWN &kp UP MJ_EG  MJ_AL    &hm RCS HYP6 
           >;
         };
 
-        /* default_layer { */
-        /*   display-name = "Base"; */
-        /*   bindings = < */
-        /*     &kp EQUAL &kp N1    &kp N2    &kp N3   &kp N4    &kp N5 &ktog KP                                                            &mo MOD  &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS  */
-        /*     &kp TAB   &kp Q     &kp W     &kp E    &kp R     &kp T  &to BASE                                                            &to BJIS &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH  */
-        /*     &kp ESC   &kp A     &kp S     &kp D    &kp F     &kp G  &to DEF           &kp LCTRL &kp LGUI  &kp RGUI  &kp RCTRL           &kp RPAR &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT */
-        /*     &td_sft   &kp Z     &kp X     &kp C    &kp V     &kp B                              &kp LALT  &kp RALT                               &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &td_sft */
-        /*     &kp LCS   &kp GRAVE &tog BJIS &kp LEFT &kp RIGHT                 &kp BSPC &mo SYM   &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &mo MOD  &mo SYM  &kp LCS  */
-        /*   >; */
-        /* }; */
+        layer_default_reverse {
+          display-name = "BASE_R";
+          bindings = <
+            &kp TAB      &kp N1 AJ_N2   &kp N3   &kp N4    &kp N5 &tog KP                                                             &mo MOD  AJ_N6  AJ_N7    AJ_N8     AJ_N9    AJ_N0    MJ_BP
+            MJ_EP        &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                            &to AREV &kp Y  &kp U    &kp I     &kp O    &kp P    MJ_MU
+            &kp ESC      &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LANG2 &kp LCTRL &kp RCTRL &kp LANG1           &to ANSI &kp H  &kp J    &kp K     &kp L    MJ_SC    MJ_QD
+            &kp SYMJ     &kp Z  &kp X   &kp C    &kp V     &kp B                              &kp LALT  &kp RALT                               &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp SYMJ
+            &hm LCS HYP7 MJ_GT  &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &msr      &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                 &kp DOWN &kp UP    JP_LBRC  JP_RBRC  &hm RCS HYP6 
+          >;
+        };
+
+        layer_ansi {
+          display-name = "ANSI";
+          bindings = <
+            &kp TAB      MM_N1     MM_N2 MM_N3    MM_N4     MM_N5 &tog KP                                                             &mo MOD  MM_N6 MM_N7    MM_N8  MM_N9 MM_N0    &kp BSLH
+            &kp EQUAL    &kp Q     &kp W &kp E    &kp R     &kp T &to BREV                                                            &to AREV &kp Y &kp U    &kp I  &kp O &kp P    &kp MINUS
+            &kp ESC      &kp A     &kp S &kp D    &kp F     &kp G &to BASE          &kp LANG2 &kp LCTRL &kp RCTRL &kp LANG1           &to ANSI &kp H &kp J    &kp K  &kp L &kp SEMI &kp SQT
+            &kp SYM      &kp Z     &kp X &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N &kp M    MM_CC  MM_DD &kp FSLH &kp SYM
+            &hm LCS HYP7 &kp GRAVE MM_PA &kp LEFT &kp RIGHT                &kp BSPC &msr      &kp LGUI  &kp RGUI  &kp ENTER &kp SPACE                &kp DOWN &kp UP MM_EG MM_AL    &hm RCS HYP6 
+          >;
+        };
+
+        layer_ansi_reverse {
+          display-name = "ANSI_R";
+          bindings = <
+            &kp TAB      &kp N1    &kp N2  &kp N3   &kp N4    &kp N5 &tog KP                                                            &mo MOD  &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp BSLH
+            &kp EQUAL    &kp Q     &kp W   &kp E    &kp R     &kp T  &to BREV                                                           &to AREV &kp Y  &kp U    &kp I     &kp O    &kp P    &kp MINUS
+            &kp ESC      &kp A     &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LANG2 &kp LCTRL &hm RCTRL &kp LANG1          &to ANSI &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
+            &kp SYM      &kp Z     &kp X   &kp C    &kp V     &kp B                              &kp LALT  &hm RALT                              &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp SYM
+            &hm LCS HYP7 &kp GRAVE &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &msr      &ko LGUI  &kp RGUI  &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp LBKT &kp RBKT &hm RCS HYP6 
+          >;
+        };
 
         layer_symbol_with_jis {
           display-name = "Sym_JIS";
           bindings = <
-            &kp CAD &kp F1 &kp F2      &kp F3   &kp F4   &kp F5 &none                                     &none &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
-            &kp CAI &none  &none       &kp RBRC &kp PIPE &none  &none                                     &none &none    &none    &none  &none     &none   &kp F12
-            &kp SI  &none  &kp UNDER   &kp STAR &kp LPAR &none  &none       &none &none &none &none       &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none   &kp F13
-            &none   &none  &kp KP_PLUS &kp RBKT &kp BSLH &none                    &none &none                   &none    &none    &none  &none     &none   &kp F14
-            &none   &none  &none       &none    &none                 &none &none &none &none &none &none                &none    &none  &none     &none   &kp F15
+            &kp CAD &kp F1 &kp F2 &kp F3   &kp F4   &kp F5 XXX                                               XXX &kp F6   &kp F7   &kp F8   &kp F9    &kp F10   &kp F11
+            &kp CAI XXX  XXX      XXX      XXX      XXX    XXX                                               XXX XXX      XXX      XXX      XXX       &kp PSCRN &kp F12
+            &kp SI  XXX  XXX      XXX      XXX      XXX    XXX           XXX     ___ ___ XXX                 XXX &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp W_PSC &kp F13
+            XXX     XXX  XXX      &kp COPY &kp PSTE XXX                          ___ ___                         XXX      XXX      &kp LT   &kp GT    XXX       &kp F14
+            XXX     XXX  XXX      XXX      XXX                 &kp S_DEL &kp DEL ___ ___ &kp LC(2) &kp LC(1)              &kp C_PU &kp C_PD XXX       XXX       &kp F15
           >;
         };
 
         layer_symbol {
           display-name = "Sym";
           bindings = <
-            &kp GRAVE &kp N1    &kp N2    &kp N3    &kp N4   &kp N5    &none                                              &none &kp N6  &kp N7   &kp N8   &kp N9    &kp N0 &kp F11
-            &kp AT    &kp COMMA &kp SQT   &kp DQT   &kp SEMI &kp QMARK &none                                              &none &none   &kp LBRC &kp RBRC &none     &none  &kp F12
-            &kp HASH  &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp STAR  &none       &none &none &kp DOT &kp STAR           &none &kp DOT &kp LPAR &kp RPAR &kp COMMA &none  &kp F13
-            &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp FSLH                    &none &none                            &none   &kp LBKT &kp RBKT &none     &none  &kp F14
-            &none     &none     &none     &none     &none                    &none &none &none &none   &kp COLON &kp SEMI               &none    &none    &none     &none  &kp F15
-          >;
-        };
-
-        layer_qwerty {
-          display-name = "Qwerty";
-          bindings = <
-            &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4    &kp N5 &tog KP                                                            &mo MOD  &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-            &kp TAB   &kp Q     &kp W    &kp E    &kp R     &kp T  &to BREV                                                           &to JISR &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-            &kp ESC   &kp A     &kp S    &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &to JIS  &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-            &sk LSHFT &kp Z     &kp X    &kp C    &kp V     &kp B                              &kp HOME &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &sk RSHFT
-            &mo FN    &kp GRAVE &kp LGUI &kp LEFT &kp RIGHT                 &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FN
-          >;
-        };
-
-        layer_qwerty_reverse {
-          display-name = "Qwerty_R";
-          bindings = <
-            &kp GRAVE &kp N1 &kp N2  &kp N3   &kp N4    &kp N5 &tog KP                                                                      &mo MOD  &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp BSLH
-            &kp EQUAL &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                                     &to JISR &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
-            &kp ESC   &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &hm3 LGUI F19 &hm3 RGUI HYP6 &kp TAB             &to JIS  &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-            &ltlt     &kp Z  &kp X   &kp C    &kp V     &kp B                              &hm3 LALT F20 &hm3 RALT HYP7                              &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gtgt
-            &kp INS   &caa   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC &mshift   &lt SYM LANG2 &lt FN LANG1   &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &kp RCS &dha     &kp DEL 
-          >;
-        };
-
-        layer_jis {
-          display-name = "JIS";
-          bindings = <
-            &gtj    &n1jr &n2jr   &n3jr    &n4jr     &n5jr &tog KP                                                                        &mo MOD  &n6jr &n7jr    &n8jr   &n9jr   &n0jr    &bpj
-            &epj    &kp Q &kp W   &kp E    &kp R     &kp T &to BREV                                                                       &to JISR &kp Y &kp U    &kp I   &kp O   &kp P    &muj
-            &kp ESC &kp A &kp S   &kp D    &kp F     &kp G &to BASE          &kp LCTRL &hm3 LGUI F19  &hm3 RGUI HYP6  &kp TAB             &to JIS  &kp H &kp J    &kp K   &kp L   &scj     &qdj
-            &ltlt   &kp Z &kp X   &kp C    &kp V     &kp B                             &hm3 LALT F20  &hm3 RALT HYP7                               &kp N &kp M    &comcom &dotdot &kp FSLH &gtgt
-            &kp INS &caj  &kp LCS &kp LEFT &kp RIGHT                &kp BSPC &mshift   &lt SYMJ LANG2 &lt FNJIS LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP  &kp RCS &dhj     &kp DEL 
-          >;
-        };
-
-        layer_jis_reverse {
-          display-name = "JIS_R";
-          bindings = <
-            &gtj    &kp N1 &n2j    &kp N3   &kp N4    &kp N5 &tog KP                                                                        &mo MOD  &n6j   &n7j     &n8j      &n9j    &n0j     &bpj
-            &epj    &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                                       &to JISR &kp Y  &kp U    &kp I     &kp O   &kp P    &muj
-            &kp ESC &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &hm3 LGUI F19  &hm3 RGUI HYP6 &kp TAB               &to JIS  &kp H  &kp J    &kp K     &kp L   &scj     &qdj
-            &ltlt   &kp Z  &kp X   &kp C    &kp V     &kp B                              &hm3 LALT F20  &hm3 RALT HYP7                                &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &gtgt
-            &kp INS &caj   &kp LCS &kp LEFT &kp RIGHT                 &kp BSPC &mshift   &lt SYMJ LANG2 &lt FNJIS LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &kp RCS &dhj     &kp DEL 
+            &kp GRAVE &kp F1    &kp F2    &kp F3    &kp F4   &kp F5    XXX                                               XXX &kp F6   &kp F7   &kp F8   &kp F9    &kp F10   &kp F11
+            &kp AT    &kp COMMA &kp SQT   &kp DQT   &kp SEMI &kp QMARK XXX                                               XXX XXX      XXX      XXX      XXX       &kp PSCRN &kp F12
+            &kp HASH  &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp STAR  XXX           XXX     ___ ___ XXX                 XXX &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp W_PSC &kp F13
+            &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp FSLH                        ___ ___                         XXX      XXX      &kp LT   &kp GT    XXX       &kp F14
+            XXX       XXX       XXX       XXX       XXX                    &kp S_DEL &kp DEL ___ ___ &kp LC(2) &kp LC(1)              &kp C_PU &kp C_PD XXX       XXX       &kp F15
           >;
         };
 
@@ -228,54 +207,43 @@
           display-name = "Kp";
           bindings = <
             &kp GRAVE &kp N1  &kp N2    &kp N3   &kp N4    &kp N5 &tog KP                                                           &mo MOD &kp N6 &kp KP_NUM &kp N8    &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-            &kp TAB   &kp Q   &kp W     &kp E    &kp R     &kp T  &none                                                             &none   &kp Y  &kp KP_N7  &kp KP_N8 &kp KP_N9     &kp KP_MINUS    &kp LEFT_BRACKET
-            &kp CAPS  &kp A   &kp S     &kp D    &kp F     &kp G  &none            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none   &kp H  &kp KP_N4  &kp KP_N5 &kp KP_N6     &kp KP_PLUS     &kp SINGLE_QUOTE
-            &sk LSHFT &kp Z   &kp X     &kp C    &kp V     &kp B                             &kp HOME &kp PG_UP                             &kp N  &kp KP_N1  &kp KP_N2 &kp KP_N3     &kp KP_ENTER    &sk RSHFT
-            &mo FN    &kp ESC &kp EQUAL &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp KP_N0                &kp UP     &kp DOWN  &kp KP_DOT    &kp KP_ENTER    &mo FN
+            &kp TAB   &kp Q   &kp W     &kp E    &kp R     &kp T  XXX                                                               XXX     &kp Y  &kp KP_N7  &kp KP_N8 &kp KP_N9     &kp KP_MINUS    &kp LEFT_BRACKET
+            &kp CAPS  &kp A   &kp S     &kp D    &kp F     &kp G  XXX            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL             XXX     &kp H  &kp KP_N4  &kp KP_N5 &kp KP_N6     &kp KP_PLUS     &kp SINGLE_QUOTE
+            &sk LSHFT &kp Z   &kp X     &kp C    &kp V     &kp B                           &kp HOME &kp PG_UP                               &kp N  &kp KP_N1  &kp KP_N2 &kp KP_N3     &kp KP_ENTER    &sk RSHFT
+            &mo FN    &kp ESC &kp EQUAL &kp LEFT &kp RIGHT                &kp BSPC &kp DEL &kp END  &kp PG_DN &kp ENTER &kp KP_N0                  &kp UP     &kp DOWN  &kp KP_DOT    &kp KP_ENTER    &mo FN
+          >;
+        };
+
+        layer_fn_jis {
+          display-name = "FnJIS";
+          bindings = <
+            ___      &kp F1    &kp F2   &kp F3     &kp F4       &kp F5       &tog KP                                       &mo MOD &kp F6    &kp F7    &kp F8  &kp F9    &kp F10   &kp F11
+            ___      &kp PG_UP &kp HOME &kp C_PREV &kp C_BRI_UP &kp C_VOL_UP XXX                                           XXX     ___       &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F12
+            &kp SLCK &kp PG_DN &kp END  &kp C_NEXT &kp C_BRI_DN &kp C_VOL_DN XXX                ___     ___ ___ ___        XXX     &kp DOT   &kp N4    &kp N5  &kp N6    &kp DQT   &kp F13
+            ___      ___       ___      &kp C_PP   ___          &kp C_MUTE                              ___ ___                    &kp SPACE &kp N1    &kp N2  &kp N3    &kp MINUS &kp F14
+            ___      ___       ___      ___        ___                                &kp S_DEL &kp DEL ___ ___ ___ &kp N0                   &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F15
           >;
         };
 
         layer_fn {
           display-name = "Fn";
           bindings = <
-            &trans   &kp F1    &kp F2   &kp F3     &kp F4       &kp F5       &tog KP                                              &mo MOD &kp F6    &kp F7    &kp F8  &kp F9    &kp F10   &kp F11
-            &trans   &kp PG_UP &kp HOME &kp C_PREV &kp C_BRI_UP &kp C_VOL_UP &none                                                &none   &trans    &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F12
-            &kp SLCK &kp PG_DN &kp END  &kp C_NEXT &kp C_BRI_DN &kp C_VOL_DN &none          &trans &trans &trans &trans           &none   &kp DOT   &kp N4    &kp N5  &kp N6    &kp STAR  &kp F13
-            &trans   &trans    &trans   &kp C_PP   &trans       &kp C_MUTE                         &trans &trans                          &kp SPACE &kp N1    &kp N2  &kp N3    &kp MINUS &kp F14
-            &trans   &trans    &trans   &trans     &trans                            &trans &trans &trans &trans &trans &kp KP_N0                   &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F15
+            ___      &kp F1    &kp F2   &kp F3     &kp F4       &kp F5       &tog KP                                         &mo MOD &kp F6    &kp F7    &kp F8  &kp F9    &kp F10   &kp F11
+            ___      &kp PG_UP &kp HOME &kp C_PREV &kp C_BRI_UP &kp C_VOL_UP XXX                                             XXX     ___       &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F12
+            &kp SLCK &kp PG_DN &kp END  &kp C_NEXT &kp C_BRI_DN &kp C_VOL_DN XXX               ___     ___ ___ ___           XXX     &kp DOT   &kp N4    &kp N5  &kp N6    &kp STAR  &kp F13
+            ___      ___       ___      &kp C_PP   ___          &kp C_MUTE                             ___ ___                       &kp SPACE &kp N1    &kp N2  &kp N3    &kp MINUS &kp F14
+            ___      ___       ___      ___        ___                               &kp S_DEL &kp DEL ___ ___ ___ &kp KP_N0                   &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F15
          >;
-        };
-
-        /* layer_fn { */
-        /*   display-name = "Fn"; */
-        /*   bindings = < */
-        /*     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6 &tog KP                                                                         &mo MOD  &kp F7    &kp F8    &kp F9     &kp F10    &kp F11  &kp F12 */
-        /*     &trans  &trans  &trans  &trans  &trans  &trans &none                                                                           &none    &kp LBRC  &kp RBRC  &kp MINUS  &kp PLUS   &trans   &trans */
-        /*     &trans  &trans  &trans  &trans  &trans  &trans &none          &trans  &trans                &trans             &trans          &none    &kp LPAR  &kp RPAR  &kp UNDER  &kp EQUAL  &trans   &trans */
-        /*     &trans  &trans  &trans  &trans  &trans  &trans                        &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP                             &kp LBKT  &kp RBKT  &trans     &trans     &trans   &trans */
-        /*     &trans  &trans  &trans  &trans  &trans                &trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &trans                     &trans    &trans     &trans     &trans   &trans */
-        /*   >; */
-        /* }; */
-
-        layer_fn_jis {
-          display-name = "FnJIS";
-          bindings = <
-            &trans   &kp F1    &kp F2   &kp F3     &kp F4       &kp F5       &tog KP                                           &mo MOD &kp F6    &kp F7    &kp F8  &kp F9    &kp F10   &kp F11
-            &trans   &kp PG_UP &kp HOME &kp C_PREV &kp C_BRI_UP &kp C_VOL_UP &none                                             &none   &trans    &kp N7    &kp N8  &kp N9    &kp FSLH  &kp F12
-            &kp SLCK &kp PG_DN &kp END  &kp C_NEXT &kp C_BRI_DN &kp C_VOL_DN &none          &trans &trans &trans &trans        &none   &kp DOT   &kp N4    &kp N5  &kp N6    &kp DQT   &kp F13
-            &trans   &trans    &trans   &kp C_PP   &trans       &kp C_MUTE                         &trans &trans                       &kp SPACE &kp N1    &kp N2  &kp N3    &kp MINUS &kp F14
-            &trans   &trans    &trans   &trans     &trans                            &trans &trans &trans &trans &trans &kp N0                   &kp COMMA &kp DOT &kp EQUAL &kp PLUS  &kp F15
-          >;
         };
 
         layer_mod {
           display-name = "Mod";
           bindings = <
-            &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                               &trans                 &none &none      &none      &none &none &none
-            &none &none        &none        &none        &none        &none        &bootloader                                                         &bootloader            &none &none      &none      &none &none &none
-            &none &bt0         &bt1         &none        &none        &none        &none             &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none &none      &none      &none &none &none
-            &none &none        &none        &none        &mv          &none                                &none &none                                                        &none &none      &none      &none &none &none
-            &none &none        &none        &none        &none                                 &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                        &bl BL_INC &bl BL_DEC &none &none &none
+            XXX &bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4 XXX                                                           ___                    XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX     XXX     XXX     XXX     XXX     &bootloader                                                   &bootloader            XXX  XXX        XXX        XXX XXX XXX
+            XXX &bt0    &bt1    XXX     XXX     XXX     XXX             XXX XXX &bt BT_CLR XXX                        &rgb_ug RGB_MEFS_CMD 5 XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX     XXX     XXX     &mv     XXX                         XXX XXX                                                          XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX     XXX     XXX     XXX                         XXX XXX XXX XXX        &bl BL_TOG &rgb_ug RGB_TOG                             &bl BL_INC &bl BL_DEC XXX XXX XXX
           >;
         };
 
