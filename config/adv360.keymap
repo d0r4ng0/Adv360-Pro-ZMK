@@ -29,7 +29,6 @@
 #define MEH LC(LS(LALT))
 #define CAD LC(LA(DEL))
 #define CAI LC(LA(INS))
-#define SI  LS(INS)
 #define ST  LG(TAB)
 #define GG  LG(GRAVE)
 #define HYP6 LC(LS(LA(LG(N6))))
