@@ -177,7 +177,7 @@
           bindings = <
             &kp CAD &kp F1 &kp F2 &kp F3      &kp F4      &kp F5 XXX                                               XXX &kp F6   &kp F7   &kp F8   &kp F9    &kp F10   &kp F11
             &kp CAI XXX  XXX      XXX         XXX         XXX    XXX                                               XXX XXX      XXX      XXX      XXX       &kp PSCRN &kp F12
-            &kp SI  XXX  XXX      XXX         XXX         XXX    XXX           XXX     ___ ___ XXX                 XXX &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp W_PSC &kp F13
+            XXX     XXX  XXX      XXX         XXX         XXX    XXX           XXX     ___ ___ XXX                 XXX &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp W_PSC &kp F13
             XXX     XXX  XXX      &kp LC(INS) &kp LS(INS) XXX                          ___ ___                         XXX      XXX      &kp LT   &kp GT    XXX       &kp F14
             XXX     XXX  XXX      XXX         XXX                    &kp S_DEL &kp DEL ___ ___ &kp LC(2) &kp LC(1)              &kp C_PU &kp C_PD XXX       XXX       &kp F15
           >;
