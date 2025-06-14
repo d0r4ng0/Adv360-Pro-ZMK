@@ -34,12 +34,18 @@
 #define GG  LG(GRAVE)
 #define HYP6 LC(LS(LA(LG(N6))))
 #define HYP7 LC(LS(LA(LG(N7))))
+#define W_CP LC(INS)
+#define W_PT LS(INS)
 #define C_PD LC(PG_DN)
 #define C_PU LC(PG_UP)
 #define W_PSC LG(PSCRN)
 #define S_DEL LS(DEL)
 
-#define BS BT_SEL
+#define BT0 &bt BT_SEL 0
+#define BT1 &bt BT_SEL 1
+#define BT2 &bt BT_SEL 2
+#define BT3 &bt BT_SEL 3
+#define BT4 &bt BT_SEL 4
 
 #define XXX &none
 #define ___ &trans
@@ -171,11 +177,11 @@
         layer_symbol_with_jis {
           display-name = "Sym_JIS";
           bindings = <
-            &kp CAD &kp F1 &kp F2 &kp F3      &kp F4      &kp F5 XXX                                               XXX &kp F6   &kp F7   &kp F8   &kp F9    &kp F10   &kp F11
-            &kp CAI XXX  XXX      XXX         XXX         XXX    XXX                                               XXX XXX      XXX      XXX      XXX       &kp PSCRN &kp F12
-            XXX     XXX  XXX      XXX         XXX         XXX    XXX           XXX     ___ ___ XXX                 XXX &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp W_PSC &kp F13
-            XXX     XXX  XXX      &kp LC(INS) &kp LS(INS) XXX                          ___ ___                         XXX      XXX      &kp LT   &kp GT    XXX       &kp F14
-            XXX     XXX  XXX      XXX         XXX                    &kp S_DEL &kp DEL ___ ___ &kp LC(2) &kp LC(1)              &kp C_PU &kp C_PD XXX       XXX       &kp F15
+            &kp CAD &kp F1 &kp F2 &kp F3   &kp F4   &kp F5 XXX                                               XXX &kp F6   &kp F7   &kp F8   &kp F9    &kp F10   &kp F11
+            &kp CAI XXX  XXX      XXX      XXX      XXX    XXX                                               XXX XXX      XXX      XXX      XXX       &kp PSCRN &kp F12
+            XXX     XXX  XXX      XXX      XXX      XXX    XXX           XXX     ___ ___ XXX                 XXX &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp W_PSC &kp F13
+            XXX     XXX  XXX      &kp W_CP &kp W_PT XXX                          ___ ___                         XXX      XXX      &kp LT   &kp GT    XXX       &kp F14
+            XXX     XXX  XXX      XXX      XXX                 &kp S_DEL &kp DEL ___ ___ &kp LC(2) &kp LC(1)              &kp C_PU &kp C_PD XXX       XXX       &kp F15
           >;
         };
 
@@ -226,11 +232,11 @@
         layer_mod {
           display-name = "Mod";
           bindings = <
-            XXX &bt BS 0 &bt BS 1 &bt BS 2 &bt BS 3 &bt BS 4 XXX                                                           ___                    XXX  XXX        XXX        XXX XXX XXX
-            XXX XXX      XXX      XXX      XXX      XXX      &bootloader                                                   &bootloader            XXX  XXX        XXX        XXX XXX XXX
-            XXX &bt0     &bt1     XXX      XXX      XXX      XXX             XXX XXX &bt BT_CLR XXX                        &rgb_ug RGB_MEFS_CMD 5 XXX  XXX        XXX        XXX XXX XXX
-            XXX XXX      XXX      XXX      &mv      XXX                          XXX XXX                                                          XXX  XXX        XXX        XXX XXX XXX
-            XXX XXX      XXX      XXX      XXX                           XXX XXX XXX XXX        &bl BL_TOG &rgb_ug RGB_TOG                             &bl BL_INC &bl BL_DEC XXX XXX XXX
+            XXX BT0  BT1  BT2 BT3 BT4 XXX                                                           ___                    XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX  XXX  XXX XXX XXX &bootloader                                                   &bootloader            XXX  XXX        XXX        XXX XXX XXX
+            XXX &bt0 &bt1 XXX XXX XXX XXX             XXX XXX &bt BT_CLR XXX                        &rgb_ug RGB_MEFS_CMD 5 XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX  XXX  XXX &mv XXX                     XXX XXX                                                          XXX  XXX        XXX        XXX XXX XXX
+            XXX XXX  XXX  XXX XXX                 XXX XXX XXX XXX        &bl BL_TOG &rgb_ug RGB_TOG                             &bl BL_INC &bl BL_DEC XXX XXX XXX
           >;
         };
 
