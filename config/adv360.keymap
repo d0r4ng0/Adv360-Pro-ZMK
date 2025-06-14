@@ -16,11 +16,10 @@
 #define AREV  3
 #define SYMJ  4
 #define SYM   5
-#define DEF   6
-#define KP    7
-#define FNJ   8
-#define FN    9
-#define MOD   10
+#define KP    6
+#define FNJ   7
+#define FN    8
+#define MOD   9
 
 #define LCS LC(LSHFT)
 #define RCS RC(RSHFT)
