@@ -90,7 +90,7 @@ SIMPLE_MORPH(aj_n0_rpar,     SFT, &kp N0, &kp LPAR       )
 #define AJ_N9 &aj_n9_lpar
 #define AJ_N0 &aj_n0_rpar
 
-/* /* Programmer's Qwerty shifts morphs */ */
+/* Programmer's Qwerty shifts morphs */
 /*   star_n1: star_n1 { */
 /*     compatible = "zmk,behavior-mod-morph"; */
 /*     #binding-cells = <0>; */
@@ -197,7 +197,7 @@ SIMPLE_MORPH(aj_n0_rpar,     SFT, &kp N0, &kp LPAR       )
 /*     bindings = <&kp DOT>, <&kp DOT>; */
 /*   }; */
 /**/
-/* /* Programmer's Qwerty shifts morph&kp s with &kp JIS */ */
+/* Programmer's Qwerty shifts morph&kp s with &kp JIS */
 /*   jis_star_n1: jis_star_n1 { */
 /*     compatible = "zmk,behavior-mod-morph"; */
 /*     #binding-cells = <0>; */
@@ -332,7 +332,7 @@ SIMPLE_MORPH(aj_n0_rpar,     SFT, &kp N0, &kp LPAR       )
 /*     bindings = <&kp SEMI>, <&kp SQT>; */
 /*   }; */
 /**/
-/* /* Convert from JIS to ANSI */ */
+/* Convert from JIS to ANSI */
 /*   aj_n2_at: aj_n2_at { */
 /*     compatible = "zmk,behavior-mod-morph"; */
 /*     #binding-cells = <0>; */
