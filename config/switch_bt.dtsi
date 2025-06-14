@@ -1,5 +1,4 @@
 bt0: bt0 {
-  label = "&BT0";
   compatible = "zmk,behavior-macro";
   #binding-cells = <0>;
   tap-ms = <50>;
@@ -18,7 +17,6 @@ bt0: bt0 {
   , <&bt BT_SEL 0>;
 };
 bt1: bt1 {
-  label = "&BT1";
   compatible = "zmk,behavior-macro";
   #binding-cells = <0>;
   tap-ms = <50>;
