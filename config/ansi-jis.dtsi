@@ -94,90 +94,105 @@
   star_n1: star_n1 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "star_n1";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp STAR>, <&kp N1>;
   };
   lbkt_n2: lbkt_n2 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "lbkt_n2";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp LBKT>, <&kp N2>;
   };
   lbrc_n3: lbrc_n3 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "lbrc_n3";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp LBRC>, <&kp N3>;
   };
   lpar_n4: lpar_n4 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "lpar_n4";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp LPAR>, <&kp N4>;
   };
   hash_n5: hash_n5 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "hash_n5";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp HASH>, <&kp N5>;
   };
   caret_n6: caret_n6 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "caret_n6";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp CARET>, <&kp N6>;
   };
   rpar_n7: rpar_n7 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "rpar_n7";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp RPAR>, <&kp N7>;
   };
   rbrc_n8: rbrc_n8 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "rbrc_n8";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp RBRC>, <&kp N8>;
   };
   rbkt_n9: rbkt_n9 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "rbkt_n9";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp RBKT>, <&kp N9>;
   };
   dllr_n0: dllr_n0 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "dllr_n0";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp DLLR>, <&kp N0>;
   };
   excl_gt: excl_gt {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "excl_gt";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp EXCL>, <&kp GT>;
   };
   at_lt: at_lt {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "at_lt";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp AT>, <&kp LT>;
   };
   prcnt_amps: prcnt_amps {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "prcnt_amps";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp PRCNT>, <&kp AMPS>;
   };
   comma_comma: comma_comma {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "comma_comma";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp COMMA>, <&kp COMMA>;
   };
   dot_dot: dot_dot {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "dot_dot";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp DOT>, <&kp DOT>;
   };
@@ -186,114 +201,133 @@
   jis_star_n1: jis_star_n1 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_star_n1";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp DQT>, <&kp N1>;
   };
   jis_lbkt_n2: jis_lbkt_n2 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_lbkt_n2";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp RBKT>, <&kp N2>;
   };
   jis_lbrc_n3: jis_lbrc_n3 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_lbrc_n3";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp RBRC>, <&kp N3>;
   };
   jis_lpar_n4: jis_lpar_n4 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_lpar_n4";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp STAR>, <&kp N4>;
   };
   jis_hash_n5: jis_hash_n5 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_hash_n5";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp HASH>, <&kp N5>;
   };
   jis_caret_n6: jis_caret_n6 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_caret_n6";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp EQUAL>, <&kp N6>;
   };
   jis_rpar_n7: jis_rpar_n7 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_rpar_n7";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp LPAR>, <&kp N7>;
   };
   jis_rbrc_n8: jis_rbrc_n8 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_rbrc_n8";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp PIPE>, <&kp N8>;
   };
   jis_rbkt_n9: jis_rbkt_n9 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_rbkt_n9";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp BSLH>, <&kp N9>;
   };
   jis_dllr_n0: jis_dllr_n0 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_dllr_n0";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp DLLR>, <&kp N0>;
   };
   jis_excl_gt: jis_excl_gt {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_excl_gt";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp EXCL>, <&kp GT>;
   };
   jis_at_lt: jis_at_lt {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_at_lt";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp LBKT>, <&kp LT>;
   };
   jis_prcnt_amps: jis_prcnt_amps {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_prcnt_amps";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp PRCNT>, <&kp CARET>;
   };
   jis_grave_tilde: jis_grave_tilde {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_grave_tilde";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp LBRC>, <&kp PLUS>;
   };
   jis_equal_plus: jis_equal_plus {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_equal_plus";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp LBRC>, <&kp PLUS>;
   };
   jis_minus_under: jis_minus_under {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_minus_under";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp MINUS>, <&kp LS(INT1)>;
   };
   jis_bslh_pipe: jis_bslh_pipe {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_bslh_pipe";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp INT3>, <&kp LS(INT3)>;
   };
   jis_sqt_dqt: jis_sqt_dqt {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_sqt_dqt";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp AMPS>, <&kp AT>;
   };
   jis_semi_colon: jis_semi_colon {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "jis_semi_colon";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp SEMI>, <&kp SQT>;
   };
@@ -302,36 +336,42 @@
   aj_n2_at: aj_n2_at {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "aj_n2_at";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp N2>, <&kp LBKT>;
   };
   aj_n6_caret: aj_n6_caret {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "aj_n6_caret";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp N6>, <&kp EQUAL>;
   };
   aj_n7_amps: aj_n7_amps {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "aj_n7_amps";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp N7>, <&kp CARET>;
   };
   aj_n8_star: aj_n8_star {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "aj_n8_star";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp N8>, <&kp DQT>;
   };
   aj_n9_lpar: aj_n9_lpar {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "aj_n9_lpar";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp N9>, <&kp STAR>;
   };
   aj_n0_rpar: aj_n0_rpar {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
+    label = "aj_n0_rpar";
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp N0>, <&kp LPAR>;
   };
