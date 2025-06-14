@@ -8,6 +8,7 @@
 
 #include "include/adv360.h"
 #include "include/helper.h"
+#include "ansi-jis.dtsi"
 
 #define BASE  0
 #define BREV  1
@@ -96,7 +97,6 @@
 
 / {
     behaviors {
-      #include "ansi-jis.dtsi"
       #include "macros.dtsi"
       #include "version.dtsi"
       #include "switch_bt.dtsi"
