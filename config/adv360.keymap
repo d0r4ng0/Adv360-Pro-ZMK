@@ -145,7 +145,7 @@
             MJ_EP        &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                           &to AREV &kp Y &kp U    &kp I     &kp O    &kp P    MJ_MU
             MJ_GT        &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &kp LGUI &kp TAB   &kp ESC             &to ANSI &kp H &kp J    &kp K     &kp L    MJ_SC    MJ_QD
             &mo SYMJ     &kp Z  &kp X   &kp C    &kp V     &kp B                              &kp LALT &kp LANG1                              &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &mo SYMJ
-            &hm LCS HYP7 MJ_GT  &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &kp HYP  &kp LNAG2 &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp RBRC &kp BSLH &hm RCS HYP6 
+            &hm LCS HYP7 MJ_GT  &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &kp HYP  &kp LANG2 &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp RBRC &kp BSLH &hm RCS HYP6 
           >;
         };
 
