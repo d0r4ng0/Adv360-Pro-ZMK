@@ -16,6 +16,8 @@ SIMPLE_MORPH(rbkt_n9,         SFT, &kp RBKT,  &kp N9      )
 SIMPLE_MORPH(dllr_n0,         SFT, &kp DLLR,  &kp N0      )
 SIMPLE_MORPH(excl_lt,         SFT, &kp EXCL,  &kp LT      )
 SIMPLE_MORPH(at_gt,           SFT, &kp AT,    &kp GT      )
+SIMPLE_MORPH(prcnt_lt,        SFT, &kp PRCNT, &kp LT      )
+SIMPLE_MORPH(amps_gt,         SFT, &kp AMPS,  &kp GT      )
 SIMPLE_MORPH(prcnt_amps,      SFT, &kp PRCNT, &kp AMPS    )
 SIMPLE_MORPH(comma_comma,     SFT, &kp COMMA, &kp COMMA   )
 SIMPLE_MORPH(dot_dot,         SFT, &kp DOT,   &kp DOT     )
@@ -32,6 +34,8 @@ SIMPLE_MORPH(jis_rbkt_n9,     SFT, &kp BSLH,  &kp N9      )
 SIMPLE_MORPH(jis_dllr_n0,     SFT, &kp DLLR,  &kp N0      )
 SIMPLE_MORPH(jis_excl_lt,     SFT, &kp EXCL,  &kp LT      )
 SIMPLE_MORPH(jis_at_gt,       SFT, &kp LBKT,  &kp GT      )
+SIMPLE_MORPH(jis_prcnt_lt,    SFT, &kp PRCNT, &kp LT      )
+SIMPLE_MORPH(jis_amps_gt,     SFT, &kp CARET, &kp GT      )
 SIMPLE_MORPH(jis_prcnt_amps,  SFT, &kp PRCNT, &kp CARET   )
 SIMPLE_MORPH(jis_grave_tilde, SFT, &kp LBRC,  &kp PLUS    )
 SIMPLE_MORPH(jis_equal_plus,  SFT, &kp UNDER, &kp LS(SEMI))
@@ -57,8 +61,10 @@ SIMPLE_MORPH(aj_n0_rpar,     SFT, &kp N0, &kp LPAR       )
 #define MM_N8 &rbrc_n8
 #define MM_N9 &rbkt_n9
 #define MM_N0 &dllr_n0
-#define MM_EL &excl_lt
-#define MM_AG &at_gt
+/* #define MM_EL &excl_lt */
+/* #define MM_AG &at_gt */
+#define MM_PL &prcnt_lt
+#define MM_AG &amps_gt
 #define MM_PA &prcnt_amps
 #define MM_CC &comma_comma
 #define MM_DD &dot_dot
@@ -73,8 +79,10 @@ SIMPLE_MORPH(aj_n0_rpar,     SFT, &kp N0, &kp LPAR       )
 #define MJ_N8 &jis_rbrc_n8
 #define MJ_N9 &jis_rbkt_n9
 #define MJ_N0 &jis_dllr_n0
-#define MJ_EL &jis_excl_lt
-#define MJ_AG &jis_at_gt
+/* #define MJ_EL &jis_excl_lt */
+/* #define MJ_AG &jis_at_gt */
+#define MJ_PL &jis_prcnt_lt
+#define MJ_AG &jis_amps_gt
 #define MJ_PA &jis_prcnt_amps
 #define MJ_GT &jis_grave_tilde
 #define MJ_EP &jis_equal_plus
