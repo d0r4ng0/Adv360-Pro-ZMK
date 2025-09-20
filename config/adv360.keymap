@@ -175,11 +175,11 @@
         layer_symbol_with_jis {
           display-name = "Sym_JIS";
           bindings = <
-            &kp CAD &kp F1 &kp F2 &kp F3   &kp F4   &kp F5 XXX                                        XXX &kp F6   &kp F7   &kp F8    &kp F9    &kp F10   &kp F11
-            &kp CAI &kp N1 &kp N2 &kp N3   &kp N4   &kp N5 XXX                                        XXX &kp N6   &kp N7   &kp N8    &kp N9    &kp N0    &kp F12
-            XXX     XXX    XXX    XXX      XXX      XXX    XXX     XXX  ___ ___ XXX                   XXX &kp LEFT &kp DOWN &kp UP    &kp RIGHT &kp DEL   &kp PSCRN
-            XXX     XXX    XXX    &kp W_CP &kp W_PT XXX                 ___ ___                           XXX      XXX      &kp COMMA &kp DOT   &kp S_DEL &kp A_PSC
-            XXX     XXX    XXX    XXX      XXX                 XXX XXX  ___ ___ &kp LC(N2) &kp LC(N1)              &kp C_PU &kp C_PD  XXX       XXX       &kp W_PSC
+            &kp CAD &kp F1       &kp F2    &kp F3       &kp F4    &kp F5 XXX                                        XXX &kp F6   &kp F7   &kp F8    &kp F9    &kp F10   &kp F11
+            &kp CAI &kp N1       &kp N2    &kp N3       &kp N4    &kp N5 XXX                                        XXX &kp N6   &kp N7   &kp N8    &kp N9    &kp N0    &kp F12
+            XXX     &kp LS(SEMI) &kp UNDER &kp LS(INT1) &kp MINUS XXX    XXX     XXX  ___ ___ XXX                   XXX &kp LEFT &kp DOWN &kp UP    &kp RIGHT &kp DEL   &kp PSCRN
+            XXX     XXX          XXX       &kp W_CP     &kp W_PT  XXX                 ___ ___                           XXX      XXX      &kp COMMA &kp DOT   &kp S_DEL &kp A_PSC
+            XXX     XXX          XXX       XXX          XXX                  XXX XXX  ___ ___ &kp LC(N2) &kp LC(N1)              &kp C_PU &kp C_PD  XXX       XXX       &kp W_PSC
           >;
         };
 
