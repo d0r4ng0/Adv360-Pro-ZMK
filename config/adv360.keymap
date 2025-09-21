@@ -135,8 +135,8 @@
             MJ_GT    MJ_N1    MJ_N2    MJ_N3    MJ_N4     MJ_N5 &tog KP                                                             &mo MOD  MJ_N6 MJ_N7    MJ_N8     MJ_N9   MJ_N0    MJ_BP
             MJ_EP    &kp Q    &kp W    &kp E    &kp R     &kp T &to BASE                                                            &to ANSI &kp Y &kp U    &kp I     &kp O   &kp P    MJ_MU
             &kp ESC  &kp A    &kp S    &kp D    &kp F     &kp G &kp HYP7          &kp LCTRL &kp LGUI  &kp RGUI &kp TAB              &kp HYP6 &kp H &kp J    &kp K     &kp L   MJ_SC    MJ_QD
-            &ms      &kp Z    &kp X    &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT &kp FSLH &ms
-            &kp LCS  &kp EXCL &kp LBKT &kp LEFT &kp RIGHT                &kp BSPC &mo SYMJ  &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    MJ_PL   MJ_AG    &kp RCS  
+            &mo SYMJ &kp Z    &kp X    &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT &kp FSLH &mo SYMJ
+            &kp LCS  &kp EXCL &kp LBKT &kp LEFT &kp RIGHT                &kp BSPC &ms       &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    MJ_PL   MJ_AG    &kp RCS  
           >;
         };
 
@@ -157,8 +157,8 @@
             &kp GRAVE MM_N1    MM_N2  MM_N3    MM_N4     MM_N5 &tog KP                                                             &mo MOD  MM_N6 MM_N7    MM_N8     MM_N9    MM_N0    &kp BSLH
             &kp EQUAL &kp Q    &kp W  &kp E    &kp R     &kp T &to BASE                                                            &to ANSI &kp Y &kp U    &kp I     &kp O    &kp P    &kp MINUS
             &kp ESC   &kp A    &kp S  &kp D    &kp F     &kp G &kp HYP7          &kp LCTRL &kp LGUI  &kp RGUI  &kp TAB             &kp HYP6 &kp H &kp J    &kp K     &kp L    &kp SEMI &kp SQT
-            &ms       &kp Z    &kp X  &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &ms
-            &kp LCS   &kp EXCL &kp AT &kp LEFT &kp RIGHT                &kp BSPC &mo SYM   &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    MM_PL    MM_AG    &kp RCS  
+            &mo SYM   &kp Z    &kp X  &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &mo SYM
+            &kp LCS   &kp EXCL &kp AT &kp LEFT &kp RIGHT                &kp BSPC &ms       &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    MM_PL    MM_AG    &kp RCS  
           >;
         };
 
