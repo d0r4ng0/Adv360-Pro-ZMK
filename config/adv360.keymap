@@ -132,44 +132,44 @@
         default_layer {
           display-name = "BASE";
           bindings = <
-            MJ_GT    MJ_N1    MJ_N2    MJ_N3    MJ_N4     MJ_N5 &tog KP                                                             &mo MOD  MJ_N6 MJ_N7    MJ_N8     MJ_N9   MJ_N0    MJ_BP
-            MJ_EP    &kp Q    &kp W    &kp E    &kp R     &kp T &to BASE                                                            &to ANSI &kp Y &kp U    &kp I     &kp O   &kp P    MJ_MU
-            &kp ESC  &kp A    &kp S    &kp D    &kp F     &kp G &kp HYP7          &kp LCTRL &kp LGUI  &kp RGUI &kp TAB              &kp HYP6 &kp H &kp J    &kp K     &kp L   MJ_SC    MJ_QD
-            &mo SYMJ &kp Z    &kp X    &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT &kp FSLH &mo SYMJ
-            &kp LCS  &kp EXCL &kp LBKT &kp LEFT &kp RIGHT                &kp BSPC &ms       &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    MJ_PL   MJ_AG    &kp RCS  
+            MJ_GT     MJ_N1    MJ_N2    MJ_N3    MJ_N4     MJ_N5 &tog KP                                                            &mo MOD  MJ_N6 MJ_N7    MJ_N8     MJ_N9   MJ_N0    MJ_BP
+            MJ_EP     &kp Q    &kp W    &kp E    &kp R     &kp T &to BASE                                                           &to ANSI &kp Y &kp U    &kp I     &kp O   &kp P    MJ_MU
+            &kp ESC   &kp A    &kp S    &kp D    &kp F     &kp G &kp HYP7          &kp LCTRL &kp LGUI &kp RGUI &kp RCTRL            &kp HYP6 &kp H &kp J    &kp K     &kp L   MJ_SC    MJ_QD
+            &kp LANG2 &kp Z    &kp X    &kp C    &kp V     &kp B                             &kp LALT &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT &kp FSLH &kp LANG1
+            &kp LCS   &kp EXCL &kp LBKT &kp LEFT &kp RIGHT                &kp BSPC &ms       &mo SYMJ &kp TAB  &kp ENTER &kp SPACE                 &kp DOWN &kp UP    MJ_PL   MJ_AG    &kp RCS  
           >;
         };
 
         layer_default_reverse {
           display-name = "BASE_R";
           bindings = <
-            MJ_GT        &kp N1 AJ_N2   &kp N3   &kp N4    &kp N5 &tog KP                                                             &mo MOD  AJ_N6 AJ_N7    AJ_N8     AJ_N9    AJ_N0    MJ_BP
-            MJ_EP        &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                            &to AREV &kp Y &kp U    &kp I     &kp O    &kp P    MJ_MU
-            &kp ESC      &kp A  &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &kp LGUI  &kp RGUI  &kp TAB             &to ANSI &kp H &kp J    &kp K     &kp L    MJ_SC    MJ_QD
-            &mo SYMJ     &kp Z  &kp X   &kp C    &kp V     &kp B                              &kp LALT  &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &mo SYMJ
-            &hm LCS HYP7 MJ_GT  &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp RBRC &kp BSLH &hm RCS HYP6 
+            MJ_GT     &kp N1 AJ_N2   &kp N3   &kp N4    &kp N5 &tog KP                                                           &mo MOD  AJ_N6 AJ_N7    AJ_N8     AJ_N9    AJ_N0    MJ_BP
+            MJ_EP     &kp Q  &kp W   &kp E    &kp R     &kp T  &to BREV                                                          &to ANSI &kp Y &kp U    &kp I     &kp O    &kp P    MJ_MU
+            &kp ESC   &kp A  &kp S   &kp D    &kp F     &kp G  &kp HYP7          &kp LCTRL &kp LGUI &kp RGUI &kp RCTRL           &kp HYP6 &kp H &kp J    &kp K     &kp L    MJ_SC    MJ_QD
+            &kp LANG2 &kp Z  &kp X   &kp C    &kp V     &kp B                              &kp LALT &kp RALT                              &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &kp LANG1
+            &hm LCS   MJ_GT  &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &mo SYMJ &kp TAB  &kp ENTER &kp SPACE                &kp DOWN &kp UP    &kp RBRC &kp BSLH &hm RCS 
           >;
         };
 
         layer_ansi {
           display-name = "ANSI";
           bindings = <
-            &kp GRAVE MM_N1    MM_N2  MM_N3    MM_N4     MM_N5 &tog KP                                                             &mo MOD  MM_N6 MM_N7    MM_N8     MM_N9    MM_N0    &kp BSLH
-            &kp EQUAL &kp Q    &kp W  &kp E    &kp R     &kp T &to BASE                                                            &to ANSI &kp Y &kp U    &kp I     &kp O    &kp P    &kp MINUS
-            &kp ESC   &kp A    &kp S  &kp D    &kp F     &kp G &kp HYP7          &kp LCTRL &kp LGUI  &kp RGUI  &kp TAB             &kp HYP6 &kp H &kp J    &kp K     &kp L    &kp SEMI &kp SQT
-            &mo SYM   &kp Z    &kp X  &kp C    &kp V     &kp B                             &kp LALT  &kp RALT                               &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &mo SYM
-            &kp LCS   &kp EXCL &kp AT &kp LEFT &kp RIGHT                &kp BSPC &ms       &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                &kp DOWN &kp UP    MM_PL    MM_AG    &kp RCS  
+            &kp GRAVE MM_N1    MM_N2  MM_N3    MM_N4     MM_N5 &tog KP                                                           &mo MOD  MM_N6 MM_N7    MM_N8     MM_N9    MM_N0    &kp BSLH
+            &kp EQUAL &kp Q    &kp W  &kp E    &kp R     &kp T &to BASE                                                          &to ANSI &kp Y &kp U    &kp I     &kp O    &kp P    &kp MINUS
+            &kp ESC   &kp A    &kp S  &kp D    &kp F     &kp G &kp HYP7          &kp LCTRL &kp LGUI &kp RGUI &kp RCTRL           &kp HYP6 &kp H &kp J    &kp K     &kp L    &kp SEMI &kp SQT
+            &kp LANG2 &kp Z    &kp X  &kp C    &kp V     &kp B                             &kp LALT &kp RALT                              &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH &kp LANG1
+            &kp LCS   &kp EXCL &kp AT &kp LEFT &kp RIGHT                &kp BSPC &ms       &mo SYM  &kp TAB  &kp ENTER &kp SPACE                &kp DOWN &kp UP    MM_PL    MM_AG    &kp RCS  
           >;
         };
 
         layer_ansi_reverse {
           display-name = "ANSI_R";
           bindings = <
-            &kp GRAVE    &kp N1    &kp N2  &kp N3   &kp N4    &kp N5 &tog KP                                                             &mo MOD  &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp BSLH
-            &kp EQUAL    &kp Q     &kp W   &kp E    &kp R     &kp T  &to BREV                                                            &to AREV &kp Y  &kp U    &kp I     &kp O    &kp P    &kp MINUS
-            &kp ESC      &kp A     &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &kp LGUI  &kp RGUI  &kp TAB             &to ANSI &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
-            &mo SYM      &kp Z     &kp X   &kp C    &kp V     &kp B                              &kp LALT  &kp RALT                               &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &mo SYM
-            &hm LCS HYP7 &kp GRAVE &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &kp LANG2 &kp LANG1 &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &kp LBKT &kp RBKT &hm RCS HYP6 
+            &kp GRAVE &kp N1    &kp N2  &kp N3   &kp N4    &kp N5 &tog KP                                                           &mo MOD  &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp BSLH
+            &kp EQUAL &kp Q     &kp W   &kp E    &kp R     &kp T  &to BREV                                                          &to AREV &kp Y  &kp U    &kp I     &kp O    &kp P    &kp MINUS
+            &kp ESC   &kp A     &kp S   &kp D    &kp F     &kp G  &to BASE          &kp LCTRL &kp LGUI &kp RGUI &kp RCTRL           &to ANSI &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
+            &kp LANG2 &kp Z     &kp X   &kp C    &kp V     &kp B                              &kp LALT &kp RALT                              &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp LANG1
+            &hm LCS   &kp GRAVE &kp DEL &kp LEFT &kp RIGHT                 &kp BSPC &ms       &mo SYM  &kp TAB  &kp ENTER &kp SPACE                 &kp DOWN &kp UP    &kp LBKT &kp RBKT &hm RCS
           >;
         };
 
