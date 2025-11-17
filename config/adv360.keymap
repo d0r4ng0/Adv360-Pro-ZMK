@@ -117,22 +117,22 @@
           bindings = <&kp>, <&kp>;
       };
 
-      l2sym: lang2_symbol {
+      syml2: symbol_lang2 {
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
           quick_tap_ms = <180>;
           flavor = "tap-preferred";
-          bindings = <&kp LANG2>, <&mo SYM>;
+          bindings = <&mo SYM>, <&kp LANG2>;
       };
 
-      l2symj: lang2_symbol_JIS {
+      syml2j: symbol_lang2_JIS {
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
           quick_tap_ms = <180>;
           flavor = "tap-preferred";
-          bindings = <&kp LANG2>, <&mo SYMJ>;
+          bindings = <&mo SYMJ>, <&kp LANG2>;
       };
 
       ms: magic_shift {
@@ -154,7 +154,7 @@
             &kp EQUAL &kp Q &kp W   &kp E    &kp R     &kp T &to BASE                                                            &to JIS  &kp Y &kp U    &kp I     &kp O    &kp P     &kp MINUS
             &kp GRAVE &kp A &kp S   &kp D    &kp F     &kp G &kp HF14          &kp LCTRL &kp LALT  &kp ESC   &kp TAB             &kp HF13 &kp H &kp J    &kp K     &kp L    &kp SEMI  &kp SQT
             &kp LSHFT &kp Z &kp X   &kp C    &kp V     &kp B                             &kp LGUI  &kp HYP                                &kp N &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHFT
-            &kp LCTRL MM_PA &kp DEL &kp INS &kp PSCRN                 &kp BSPC &ms       &l2sym    &kp LANG1 &kp ENTER &kp SPACE                &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &kp RCTRL
+            &kp LCTRL MM_PA &kp DEL &kp INS &kp PSCRN                 &kp BSPC &ms       &syml2    &kp LANG1 &kp ENTER &kp SPACE                &kp LEFT &kp DOWN  &kp UP   &kp RIGHT &kp RCTRL
           >;
         };
 
@@ -165,7 +165,7 @@
             &kp EQUAL &kp Q     &kp W   &kp E    &kp R     &kp T  &to BASE                                                            &to JIS  &kp Y  &kp U    &kp I     &kp O   &kp P     &kp MINUS
             &kp GRAVE &kp A     &kp S   &kp D    &kp F     &kp G  &kp HF14          &kp LCTRL &kp LALT  &kp ESC   &kp TAB             &kp HF13 &kp H  &kp J    &kp K     &kp L   &kp SEMI  &kp SQT
             &kp LSHFT &kp Z     &kp X   &kp C    &kp V     &kp B                              &kp LGUI  &kp HYP                                &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH  &kp RSHFT
-            &kp LCTRL &kp GRAVE &kp DEL &kp LBKT &kp RBKT                  &kp BSPC &ms       &l2sym    &kp LANG1 &kp ENTER &kp SPACE                 &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp RCTRL
+            &kp LCTRL &kp GRAVE &kp DEL &kp LBKT &kp RBKT                  &kp BSPC &ms       &syml2    &kp LANG1 &kp ENTER &kp SPACE                 &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp RCTRL
           >;
         };
 
@@ -176,7 +176,7 @@
             MJ_EP     &kp Q &kp W   &kp E   &kp R     &kp T &to BASE                                                             &to JIS  &kp Y &kp U    &kp I     &kp O   &kp P     MJ_MU
             MJ_GT     &kp A &kp S   &kp D   &kp F     &kp G &kp HF14          &kp LCTRL &kp LALT  &kp ESC   &kp TAB              &kp HF13 &kp H &kp J    &kp K     &kp L   MJ_SC     MJ_QD
             &kp LSHFT &kp Z &kp X   &kp C   &kp V     &kp B                             &kp LGUI  &kp HYP                                 &kp N &kp M    &kp COMMA &kp DOT &kp FSLH  &kp RSHFT
-            &kp LCTRL MJ_PA &kp DEL &kp INS &kp PSCRN                &kp BSPC &ms       &l2symj   &kp LANG1 &kp ENTER &kp SPACE                 &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp RCTRL
+            &kp LCTRL MJ_PA &kp DEL &kp INS &kp PSCRN                &kp BSPC &ms       &syml2j   &kp LANG1 &kp ENTER &kp SPACE                 &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp RCTRL
           >;
         };
 
@@ -187,7 +187,7 @@
             MJ_EP     &kp Q  &kp W   &kp E    &kp R     &kp T  &to BASE                                                            &to JIS  &kp Y &kp U    &kp I     &kp O   &kp P     MJ_MU
             MJ_GT     &kp A  &kp S   &kp D    &kp F     &kp G  &kp HF14          &kp LCTRL &kp LALT  &kp ESC   &kp TAB             &kp HF13 &kp H &kp J    &kp K     &kp L   MJ_SC     MJ_QD
             &kp LSHFT &kp Z  &kp X   &kp C    &kp V     &kp B                              &kp LGUI  &kp HYP                                &kp N &kp M    &kp COMMA &kp DOT &kp FSLH  &kp RSHFT
-            &kp LCTRL MJ_PA  &kp DEL &kp RBRC &kp BSLH                  &kp BSPC &ms       &l2symj   &kp LANG1 &kp ENTER &kp SPACE                &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp RCTRL
+            &kp LCTRL MJ_PA  &kp DEL &kp RBRC &kp BSLH                  &kp BSPC &ms       &syml2j   &kp LANG1 &kp ENTER &kp SPACE                &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp RCTRL
           >;
         };
 
